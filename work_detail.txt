@@ -1,0 +1,63 @@
+day : 1 
+
+Today, I checked how a hostel management system website usually looks. After that, I created a logo for my website. Then I made the folder structure according to the internship requirements.
+
+After that, I created the header and footer for the hostel management system. I added the logo and some quick links in the header and applied CSS to it. I also designed the footer using CSS. Finally, I included both the header and footer files in the index.php file so they appear on the home page.
+
+---------------------------------------------------------------------------------------------
+
+day :2
+Yesterday, I completed the header and footer. Today, I designed the sidebar. In the sidebar, I added options like Home, Student, Student Registration Form, Rooms, Student Attendance, Fees, and Logout.
+
+Today, I only created these options. I will create all the pages later and also add more options to the sidebar in the future.
+----------------------------------------------------------------------------------------------------------
+
+day :3 
+
+Today, I created the user login system for my Smart Hostel (Hostel Management System).
+
+First, I created the login structure using HTML. After that, I went to phpMyAdmin and created a database named Hostel Management System. Then, inside the database, I created a table named users. In this table, I added fields such as user_id, user name, email, mobile number, and password.
+
+After that, I connected the login and register files with the database. Then, I designed both the login and register pages using CSS.
+
+Finally, I created a logout file, added the logout query, and linked the logout option to the logout file so that the user can log out properly.
+---------------------------------------------------------------------------------------------------------------------------------
+day :4
+
+Yesterday, I completed the login page and registration page. Today, I started working on the home page. First, I created a hero section on the home page and added an image to it. From this section, when a student clicks on the Book Now button, it will open the hostel registration page, which I will create later.
+
+Below the hero section, I created a features section and added six cards to it.
+
+Today, I worked only on these parts.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+day : 5 
+
+Yesterday, I had completed only half of the home page. Today, I continued working on it and developed it further.
+
+Since all the sections were coming together, I created a separate div between the sections to maintain proper spacing and separation.
+
+After that, I designed all the content properly, added box shadows around the boxes, and improved the website to make it more user-friendly.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+day : 6
+
+Today, I worked on improving the existing project based on the work completed in the previous days. I made small changes in the folder structure and organized the files properly. I also updated some sections of the home page to improve spacing and alignment. Along with this, I made minor design changes in the header, sidebar, and content area to make the layout more clean and user-friendly. These small improvements helped make the website look better and more structured.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+day :7 
+
+Today, I created a student registration form that allows students to take admission in the hostel.
+
+I connected this form with the database so that the data can be stored properly. The form was connected to the database because, in the future, an admin panel will be developed to manage all student records easily.
+
+At present, I have only created the form. Tomorrow, I will add a file upload feature so that students can upload their documents.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+day : 8
+
+Yesterday, I created the student registration form. Today, I added document upload options to the form. I included options to upload a passport-size photo, Aadhar card, school/college bonafide certificate, and the previous year’s marksheet. I also made all these document uploads mandatory.
