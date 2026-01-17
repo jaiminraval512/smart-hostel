@@ -93,98 +93,111 @@ $cnn = mysqli_connect("localhost", "root", "", "smart-hostel") or die("not conne
 
 
                     <h3>Hostel Details</h3>
-                    <div class="part-box"> 
+                    <div class="part-box">
                         <div class="one-line"><label>Room Number</label>
-                        <input type="text" name="room_number" placeholder="Enter room number">
-                    </div>
-                    <div class="one-line"><label>Admission Date</label>
-                        <input type="date" name="admission_date"></div>
-                        
-                    
+                            <input type="text" name="room_number" placeholder="Enter room number">
+                        </div>
+                        <div class="one-line"><label>Admission Date</label>
+                            <input type="date" name="admission_date">
+                        </div>
+
+
                         <div class="form-group">
                             <div class="one-line"><label for="duration">Stay Duration</label>
-                            <select name="duration" id="duration" class="form-control" required>
-                                <option value="">-- Select Duration --</option>
-                                <option value="3 Months">3 Months</option>
-                                <option value="6 Months">6 Months</option>
-                                <option value="1 Year">1 Year</option>
-                                <option value="2 Years">2 Years</option>
-                            </select></div>
-                            
+                                <select name="duration" id="duration" class="form-control" required>
+                                    <option value="">-- Select Duration --</option>
+                                    <option value="3 Months">3 Months</option>
+                                    <option value="6 Months">6 Months</option>
+                                    <option value="1 Year">1 Year</option>
+                                    <option value="2 Years">2 Years</option>
+                                </select>
+                            </div>
+
                         </div>
                     </div>
 
                     <h3>Guardian Details</h3>
 
                     <div class="part-box">
-                        
-                    <div class="one-line"><label>Guardian Name</label>
-                        <input type="text" name="guardian_name" placeholder="Enter guardian name"></div>
 
-                        
+                        <div class="one-line"><label>Guardian Name</label>
+                            <input type="text" name="guardian_name" placeholder="Enter guardian name">
+                        </div>
+
+
                         <div class="one-line"> <label>Relation</label>
-                        <select name="relation" required>
-                            <option value="Father">Father</option>
-                            <option value="Mother">Mother</option>
-                            <option value="Brother">Brother</option>
-                            <option value="Sister">Sister</option>
-                            <option value="Guardian">other</option>
-                        </select></div>
-                       
+                            <select name="relation" required>
+                                <option value="Father">Father</option>
+                                <option value="Mother">Mother</option>
+                                <option value="Brother">Brother</option>
+                                <option value="Sister">Sister</option>
+                                <option value="Guardian">other</option>
+                            </select>
+                        </div>
+
                         <div class="one-line"><label>Guardian Mobile Number</label>
-                        <input type="text" name="guardian_mobile" placeholder="Enter guardian mobile number"></div>
-                        
+                            <input type="text" name="guardian_mobile" placeholder="Enter guardian mobile number">
+                        </div>
+
                         <div class="one-line"><label>Emergency Contact Number</label>
-                        <input type="text" name="emergency_contact" placeholder="Enter emergency contact number"></div>
-                        
+                            <input type="text" name="emergency_contact" placeholder="Enter emergency contact number">
+                        </div>
+
 
                     </div>
 
                     <br>
+                    <h3>Document Upload</h3>
                     <div class="part-box">
-                        <h3>Document Upload</h3>
+                        
                         <div class="one-line">
                             <label>Passport Size Photo</label>
-                        <input type="file" name="passport_photo" accept="image/*" required>
+                            <input type="file" name="passport_photo" accept="image/*" required>
                         </div>
-                        
+
                         <div class="one-line">
-                             <label>Aadhaar Card</label>
-                        <input type="file" name="aadhar_card" accept="image/*,.pdf" required>
+                            <label>Aadhaar Card</label>
+                            <input type="file" name="aadhar_card" accept="image/*,.pdf" required>
                         </div>
-                       
+
                         <div class="one-line"><label>Previous Year Marksheet</label>
-                        <input type="file" name="marksheet" accept="image/*,.pdf" required></div>
-                        
+                            <input type="file" name="marksheet" accept="image/*,.pdf" required>
+                        </div>
+
                     </div>
 
                     <h3>Hostel Rules & Declaration</h3>
                     <div class="part-box">
                         <div class="rules-box">
-                            <label>
-                                <input type="checkbox" id="agree_rules">
+                            <label id="rull">
+                                <input type="checkbox" id="agree_rules" class="check">
                                 I hereby declare that all the information provided is true and correct.
                             </label><br>
 
-                            <label>
-                                <input type="checkbox" id="agree_discipline">
+                            <label id="rull">
+                                <input type="checkbox" id="agree_discipline" class="check">
                                 I will follow all hostel rules and regulations.
                             </label><br>
 
-                            <label>
-                                <input type="checkbox" id="agree_damage">
+                            <label id="rull">
+                                <input type="checkbox" id="agree_damage" class="check">
                                 I am responsible for any damage caused to hostel property.
                             </label><br>
 
-                            <label>
-                                <input type="checkbox" id="agree_refund">
+                            <label id="rull">
+                                <input type="checkbox" id="agree_refund" class="check">
                                 Hostel fees are non-refundable as per hostel policy.
                             </label>
                         </div>
                     </div>
+                    
 
 
-                    <input type="submit" name="submit" value="Submit Admission" id="submitBtn" disabled>
+                    <div class="sbm"> <input type="submit" name="submit" value="Submit Admission" id="submitBtn" disabled> <input type="reset" value="↻ reset-form" id="reset"> </div>
+                   
+
+                    
+
 
 
                 </form>

@@ -61,3 +61,46 @@ At present, I have only created the form. Tomorrow, I will add a file upload fea
 day : 8
 
 Yesterday, I created the student registration form. Today, I added document upload options to the form. I included options to upload a passport-size photo, Aadhar card, school/college bonafide certificate, and the previous year’s marksheet. I also made all these document uploads mandatory.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+day : 9
+
+Today, I continued working on the student registration page that I had started earlier. I added a Terms and Conditions section at the bottom of the page. Then, I added JavaScript to the submit button so that the submit button appears and the form can be submitted only when the student accepts all the terms and conditions.
+
+---------------------------------------------------------------------------------------------------------------------------------------
+day : 10
+
+Today, I worked on the student admission form page. I fixed the alignment of the page and arranged all the input fields properly. After that, I added a reset button next to the submit button so that the form can be reset when needed.
+
+After completing these changes, I designed the page using CSS to improve its overall look and layout.
+-----------------------------------------------------------------------------------------------------------------------------------------
+day: 11 date : 15-jan
+
+Earlier, I had created the student registration form. Today, I started working on the weekly food menu page for the hostel.
+
+First, I prepared the menu based on my own planning. After that, I created the complete menu in a table format.
+
+Then, I fixed the alignment of the entire page and designed the table properly. In the table header, I divided it into four parts: Day, Breakfast, Lunch, and Dinner. In the table body, I used table rows to add all the days and their respective menus.
+
+Today, I completed the page using only HTML. Tomorrow, I will design it using CSS.
+-------------------------------------------------------------------------------------------------------------------------------------------
+day 12 : 16 jan 
+
+Yesterday, I had created the weekly food menu page and written it using HTML. Today, I designed the same page using CSS. I applied different background colors to the table header and table body to clearly separate them. I also styled the day column with a different color so that it stands out from the rest of the menu.
+
+In addition to this, I added hover effects using CSS transform properties to improve the user experience and make the table more interactive. These styling changes helped make the weekly menu page more attractive, organized, and easy to read.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+day 13 : 17 jan 
+
+
+Yesterday, I had created the weekly mess menu table. Today, I added a new section below the table.
+
+First, I added the meal timings so that users can easily check the breakfast, lunch, and dinner schedule. This helps students understand the daily food timings clearly.
+
+Below the timings section, I added the food-related terms and conditions to inform students about the rules and guidelines for mess usage. These additions make the page more informative and helpful for users.
+
+Overall, this new section improves clarity and provides complete information along with the weekly mess menu.
+
+---------------------------------------------------------------------------------------------------------------------------

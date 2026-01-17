@@ -112,7 +112,13 @@
         </main>
     </div>
     <?php include "includes/footer.php" ?>
+<script src="assets/js/script.js"></script>
 
 </body>
-
+    <div id="loader-wrapper">
+    <div class="loader-content">
+        <div class="spinner"></div>
+        <h2 class="loader-text">Smart <span>Hostel</span></h2>
+    </div>
+</div>
 </html>
