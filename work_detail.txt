@@ -104,3 +104,16 @@ Below the timings section, I added the food-related terms and conditions to info
 Overall, this new section improves clarity and provides complete information along with the weekly mess menu.
 
 ---------------------------------------------------------------------------------------------------------------------------
+
+day 14 : 19 jan
+Today, I designed a loader for my website. First, I added the loader code in HTML just after the body tag. After that, I styled the loader using CSS to give it a proper design and animation.
+
+Then, I wrote the logic for the loader using JavaScript. In the logic, I used an event listener so that the loader runs automatically whenever the page loads. This ensures that the loader is displayed while the page content is loading and provides a better user experience.
+
+Overall, this feature improves the look of the website and makes the loading process smoother for users.
+--------------------------------------------------------------------------------------------------------------------------------------
+day 14 : 20 jan 
+Today, I slowly started working on the admin panel. First, I checked and studied how the design and structure of an admin panel usually look. After that, I started creating the sidebar for the admin panel.
+
+As I continue creating different pages for the website, I will also manage and control all those pages through the admin panel.
+------------------------------------------------------------------------------------------------------------------------

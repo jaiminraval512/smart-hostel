@@ -1,0 +1,138 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+   font-family: 'Inter', sans-serif;
+}
+.ad_side{
+    height: 100vh;
+    
+    width: 19%;
+    background-color:rgb(63, 77, 103);
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    
+}
+.ad_logo{
+    display: flex;
+    justify-content: center;
+}
+ img{
+    height: 10vh;
+    margin-top: 4vh;
+    
+
+
+
+    
+}
+.main{
+    background-color: #f4f7f6;
+}
+
+li>a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    list-style-type: none;
+    font-size: 1rem;
+    opacity: 0.9;
+    gap: 0.5vw;
+    margin-bottom: 2vh;
+    margin-right: 5.5vw;
+
+    
+}
+li{
+
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+
+
+
+}
+ul{
+    margin-top: 10vh;
+    width: 100%;
+}
+li a{
+
+    display: flex;
+   margin-left: 2vw;
+   
+
+
+}
+li a i {
+   
+    width: 30px; 
+    
+}
+li:hover{
+    background-color:#5B6B79;
+}
+li:active, li:focus-within {
+    background-color: rgb(38, 53, 80);
+    border: 2px solid rgb(38, 53, 80);
+    border-bottom-right-radius: 60px;
+    border-top-right-radius:60px;
+    border-left: 4px solid #04A9F5;
+}
+
+.main{
+    display: flex;
+}
+.content{
+    width: 81%;
+    margin-top: 30vh;
+    
+}
+
+.cards{
+    display: flex;
+    width: 81%;
+    height: fit-content;
+    padding: 10vh;
+     gap: 20px;
+}
+.card1{
+    height: 20vh;
+    width: 20vw;
+    /* border: 1px solid black; */
+     background-color: #85409D;
+     border-radius: 10px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+    /* opacity: 0.8; */
+     
+    
+}
+.card1>i{
+    padding: 16px;
+   background-color: white;
+   border-radius: 20%;
+   color: #85409D;
+   /* height: 20px;
+   width: 20px; */
+
+}
+.detail{
+    color: white;
+
+}
+.detail>span{
+    text-transform: uppercase;
+}
+.detail .char{
+    text-align: center;
+}
+
