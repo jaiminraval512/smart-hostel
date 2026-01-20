@@ -112,7 +112,7 @@ Then, I wrote the logic for the loader using JavaScript. In the logic, I used an
 
 Overall, this feature improves the look of the website and makes the loading process smoother for users.
 --------------------------------------------------------------------------------------------------------------------------------------
-day 14 : 20 jan 
+day 15 : 20 jan 
 Today, I slowly started working on the admin panel. First, I checked and studied how the design and structure of an admin panel usually look. After that, I started creating the sidebar for the admin panel.
 
 As I continue creating different pages for the website, I will also manage and control all those pages through the admin panel.
