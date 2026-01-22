@@ -117,3 +117,19 @@ Today, I slowly started working on the admin panel. First, I checked and studied
 
 As I continue creating different pages for the website, I will also manage and control all those pages through the admin panel.
 ------------------------------------------------------------------------------------------------------------------------
+day 16 : 21 jan 
+
+Earlier, I had created the sidebar for the admin panel. Today, I styled the sidebar using CSS to improve its appearance. I added hover and focus effects to all the buttons so that they respond properly when the user interacts with them.
+
+These effects help make the admin panel more interactive and user-friendly. After completing this work, the sidebar looks more structured and visually clear.
+
+In the coming days, I will continue creating all the admin panel pages and gradually add more features to manage the system effectively.
+--------------------------------------------------------------------------------------------------------------------------
+day :17 22 jan 
+
+Earlier, I had created the sidebar for the admin panel, and I added a Students option in it. Today, I worked on the functionality of this option. When the admin clicks on the Students button, a page opens where the complete list of all registered students is displayed.
+
+I implemented this feature using a SELECT query to fetch student data from the database and show it in a proper list format. This helps the admin to view all student records in one place easily.
+
+This feature is an important part of the admin panel because it allows proper monitoring and management of student information. It is a step towards building a fully functional student management system inside the admin panel.
+------------------------------------------------------------------------------------------------------------------------------

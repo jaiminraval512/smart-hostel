@@ -136,3 +136,89 @@ li:active, li:focus-within {
     text-align: center;
 }
 
+
+/* view student.php */
+.table{
+    width: 81%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    margin-top: 20vh;
+}
+
+
+
+h2 {
+    color: #1f2937;
+    font-size: 24px;
+    
+    margin-bottom: 20px; 
+    /* border-left: 5px solid #4f46e5; */
+    padding-left: 15px;
+    text-align: center;
+}
+
+table {
+   background-color: #f0eeee;
+    width: 70%;
+    border-collapse: collapse;
+    /* margin-top: 20vh;     */
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+thead th {
+    background-color: #1f2937;
+    color: #ffffff;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+thead th:first-child {
+    border-top-left-radius: 10px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #edf2f7;
+    transition: background 0.2s;
+
+}
+
+tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+tbody td {
+    padding: 15px;
+    color: #4b5563;
+    font-size: 15px;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+.table a {
+    text-decoration: none;
+    background-color: #4f46e5;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.table a:hover {
+    background-color: #4338ca;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+    transform: translateY(-1px);
+}

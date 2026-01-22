@@ -3,7 +3,7 @@
        <img src="/php/php_/hostel-management-system/assets/images/white_logo.png" alt="Logo">
     </div>
     <ul>
-        <li><a href="#"><i class="fas fa-user-graduate"></i> Students</a></li>
+        <li><a href="../students/view_students.php"><i class="fas fa-user-graduate"></i> Students</a></li>
         <li><a href="#"><i class="fas fa-door-open"></i> Rooms</a></li>
         <li><a href="#"><i class="fas fa-money-check-alt"></i> Fees</a></li>
         <li><a href="#"><i class="fas fa-calendar-check"></i> Attendance</a></li>
