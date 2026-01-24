@@ -133,3 +133,23 @@ I implemented this feature using a SELECT query to fetch student data from the d
 
 This feature is an important part of the admin panel because it allows proper monitoring and management of student information. It is a step towards building a fully functional student management system inside the admin panel.
 ------------------------------------------------------------------------------------------------------------------------------
+
+day 18 : 23 jan 
+
+Today, I continued working on the admin panel. I focused on improving the Students section of the admin panel. When the admin clicks on the Students button, a complete list of all registered students is displayed on the screen.
+
+I implemented this functionality using a SELECT query to fetch all student data from the database and display it properly on the page. This allows the admin to view and manage student information easily.
+
+After that, I designed the entire students list page using CSS. I improved the layout, alignment, and overall appearance to make the page clean, clear, and user-friendly.
+
+This work helps make the admin panel more functional and structured, and it is an important step toward building a complete hostel management system.
+------------------------------------------------------------------------------------------------------------------------
+day 19 :24 jan
+Yesterday, I created the students list page in the admin panel and designed it using CSS. Today, I added a “View Info” option to each student record.
+
+When the admin clicks on the View Info button, a new page opens where all the details filled by that student are displayed clearly. This includes the complete information submitted during the registration process.
+
+This feature helps the admin to view individual student records in a proper and organized way. It improves data management and makes the admin panel more functional and user-friendly.
+
+This is an important step toward building a complete student management system inside the hostel management system.
+----------------------------------------------------------------------------------------------------------------
