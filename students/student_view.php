@@ -31,65 +31,131 @@ if (!$data) {
     <link rel="stylesheet" href="../admin/style.css">
 </head>
 
+
 <body>
     <div class="main">
         <?php include "../admin/admin_sidebar.php"; ?>
-    <div class="detail-box">
-        <div class="personal">
-            <h3>Personal Details</h3>
-            <p><strong>Name:</strong> <?php echo $data['full_name']; ?></p>
-            <p><strong>Gender:</strong> <?php echo $data['gender']; ?></p>
-            <p><strong>Date of Birth:</strong> <?php echo $data['date_of_birth']; ?></p>
-            <p><strong>Mobile:</strong> <?php echo $data['mobile_number']; ?></p>
-            <p><strong>Email:</strong> <?php echo $data['email']; ?></p>
-            <p><strong>City:</strong> <?php echo $data['city']; ?></p>
-            <p><strong>State:</strong> <?php echo $data['state']; ?></p>
-        </div>
-        <div class="acadmic">
-            <h3>Academic Details</h3>
-            <p><strong>College:</strong> <?php echo $data['college_name']; ?></p>
-            <p><strong>Course:</strong> <?php echo $data['course_name']; ?></p>
-            <p><strong>Year/Sem:</strong> <?php echo $data['year_sem']; ?></p>
-            <p><strong>Enrollment No:</strong> <?php echo $data['enrollment_no']; ?></p>
+        <div class="detail-box">
+            <div class="student-con">
+                <h1>Student Details </h1>
+                <div class="personal boxx">
+                    <h3>Personal Details</h3>
+                    
+                    <div class="field-group">
+                        <div class="label">Name:</div>
+                        <div class="value"><?php echo $data['full_name']; ?></div>
+                    </div>
+                    <div class="field-group">
+                        <div class="label">Gender:</div>
+                        <div class="value"><?php echo $data['gender']; ?></div>
+                    </div>
+                    <div class="field-group">
+                        <div class="label">Date of Birth:</div>
+                        <div class="value"><?php echo $data['date_of_birth']; ?></div>
+                    </div>
+                    <div class="field-group">
+                        <div class="label">Mobile:</div>
+                        <div class="value"><?php echo $data['mobile_number']; ?></div>
+                    </div>
+                    <div class="field-group">
+                        <div class="label">Email:</div>
+                        <div class="value"><?php echo $data['email']; ?></div>
+                    </div>
+                    <div class="field-group">
+                        <div class="label">City:</div>
+                        <div class="value"><?php echo $data['city']; ?></div>
+                    </div>
+                    <div class="field-group">
+                        <div class="label">State:</div>
+                        <div class="value"><?php echo $data['state']; ?></div>
+                    </div>
+                    
+                </div>
 
-        </div>
-        <div class="hostel">
-            <h3>Hostel Details</h3>
-            <p><strong>Room Number:</strong> <?php echo $data['room_number']; ?></p>
-            <p><strong>Admission Date:</strong> <?php echo $data['admission_date']; ?></p>
-            <p><strong>Duration:</strong> <?php echo $data['duration']; ?></p>
-        </div>
-        <div class="guardiuns">
-            <h3>Guardian Details</h3>
-            <p><strong>Guardian Name:</strong> <?php echo $data['guardian_name']; ?></p>
-            <p><strong>Relation:</strong> <?php echo $data['relation']; ?></p>
-            <p><strong>Guardian Mobile:</strong> <?php echo $data['guardian_mobile']; ?></p>
-            <p><strong>Emergency Contact:</strong> <?php echo $data['emergency_contact']; ?></p>
-        </div>
-        <div class="documents">
-            <h3>Documents</h3>
+                <div class="acadmic boxx">
+                    <h3>Academic Details</h3>
+                   
+                    <div class="field-group">
+                        <div class="label">College:</div>
+                        <div class="value"><?php echo $data['college_name']; ?></div>
+                    </div>
+                    <div class="field-group">
+                        <div class="label">Course:</div>
+                        <div class="value"><?php echo $data['course_name']; ?></div>
+                    </div>
+                    <div class="field-group">
+                        <div class="label">Year/Sem:</div>
+                        <div class="value"><?php echo $data['year_sem']; ?></div>
+                    </div>
+                    <div class="field-group">
+                        <div class="label">Enrollment No:</div>
+                        <div class="value"><?php echo $data['enrollment_no']; ?></div>
+                    </div>
+                </div>
 
-            <p>
-                <strong>Passport Photo:</strong><br>
-                <img src="/php/php_/uploads/students/<?php echo $data['passport_photo']; ?>" width="120">
-            </p>
+                <div class="hostel boxx">
+                    <h3>Hostel Details</h3>
+                    
+                    <div class="field-group">
+                        <div class="label">Room Number:</div>
+                        <div class="value"><?php echo $data['room_number']; ?></div>
+                    </div>
+                    <div class="field-group">
+                        <div class="label">Admission Date:</div>
+                        <div class="value"><?php echo $data['admission_date']; ?></div>
+                    </div>
+                    <div class="field-group">
+                        <div class="label">Duration:</div>
+                        <div class="value"><?php echo $data['duration']; ?></div>
+                    </div>
+                </div>
 
-            <p>
-                <strong>Aadhaar Card:</strong>
-                <a href="/php/php_/uploads/students/<?php echo $data['aadhar_card']; ?>" target="_blank">
-                    View Aadhaar
-                </a>
-            </p>
+                <div class="guardiuns boxx">
+                    <h3>Guardian Details</h3>
+                    <div class="field-group">
+                        <div class="label">Guardian Name:</div>
+                        <div class="value"><?php echo $data['guardian_name']; ?></div>
+                    </div>
+                    <div class="field-group">
+                        <div class="label">Relation:</div>
+                        <div class="value"><?php echo $data['relation']; ?></div>
+                    </div>
+                    <div class="field-group">
+                        <div class="label">Guardian Mobile:</div>
+                        <div class="value"><?php echo $data['guardian_mobile']; ?></div>
+                    </div>
+                    <div class="field-group">
+                        <div class="label">Emergency Contact:</div>
+                        <div class="value"><?php echo $data['emergency_contact']; ?></div>
+                    </div>
+                </div>
 
-            <p>
-                <strong>Marksheet:</strong>
-                <a href="/php/php_/uploads/students/<?php echo $data['marksheet']; ?>" target="_blank">
-                    View Marksheet
-                </a>
-            </p>
+                <div class="documents boxx">
+                    <h3>Documents</h3>
 
+                    <div class=" doc-group">
+                        <div class="label">Passport Photo:</div>
+                        <div class="value">
+                            <img src="/php/php_/uploads/students/<?php echo $data['passport_photo']; ?>" width="120">
+                        </div>
+                    </div>
+
+                    <div class="doc-group">
+                        <div class="label">Aadhaar Card:</div>
+                        <div class="value">
+                            <a href="/php/php_/uploads/students/<?php echo $data['aadhar_card']; ?>" target="_blank">View Aadhaar</a>
+                        </div>
+                    </div>
+
+                    <div class= "doc-group">
+                        <div class="label">Marksheet:</div>
+                        <div class="value">
+                            <a href="/php/php_/uploads/students/<?php echo $data['marksheet']; ?>" target="_blank">View Marksheet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
     </div>
 </body>
 
