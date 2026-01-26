@@ -25,7 +25,7 @@ session_start();
             <form action="">
                 <h2 class="h2">Register | Sign Up</h2>
                 <p class="login-p">Fill in your details to create a new HMS account.</p>
-                <input type="text" placeholder="create user id :" name="user_id" class="inp" required><br>
+                <input type="text" placeholder="create student id :" name="user_id" class="inp" required><br>
                 <input type="text" placeholder="enter user name : " name="user_name" class="inp" required><br>
                 <input type="email" placeholder="enter email :" name="email" class="inp" required><br>
                 <input type="number"  class="inp" placeholder="enter mobile number :" name="mobile_number" required><br>
@@ -44,13 +44,18 @@ session_start();
 
 if (isset($_REQUEST['submit'])) {
     extract($_REQUEST);
-    $insert = "insert into users(user_id,username,email,mobile,password)values('$user_id','$user_name','$email','$mobile_number','$password')";
-    $input = mysqli_query($cnn, $insert) or die(mysqli_error($cnn));
+    $insert = "insert into users(student_id,username,email,mobile,password)values('$user_id','$user_name','$email','$mobile_number','$password')";
+    $input = mysqli_query($cnn, $insert);
 
     if ($input) {
         header("Location:http://localhost/php/php_/hostel-management-system/auth/Login.php");
     } else {
-        echo "data not inserted";
+    
+        ?>
+        <script>
+        alert("user alredy exist !");
+    </script>
+   <?php     
     }
 }
 ?>

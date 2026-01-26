@@ -1,4 +1,14 @@
 <?php
+ include "../includes/header.php";
+
+if (!isset($_SESSION['student_id'])) {
+    // user login nahi hai
+
+    header("Location: ../auth/login.php");
+    exit;
+}
+?>
+<?php
 $cnn = mysqli_connect("localhost", "root", "", "smart-hostel") or die("not connect");
 ?>
 
@@ -15,7 +25,7 @@ $cnn = mysqli_connect("localhost", "root", "", "smart-hostel") or die("not conne
 
 <body>
 
-    <?php include "../includes/header.php"; ?>
+    
 
     <div class="dashboard-layout">
 
@@ -31,6 +41,12 @@ $cnn = mysqli_connect("localhost", "root", "", "smart-hostel") or die("not conne
                         <div class="one-line"><label>Full Name</label>
                             <input type="text" name="full_name" placeholder="Enter full name">
                         </div>
+                        <div class="one-line">
+                            <label>Student ID</label>
+                            <input type="text" name="student_id" placeholder="Enter Student ID" required>
+                        </div>
+
+
 
                         <div class="one-line"> <label>Gender</label>
                             <select name="gender">
@@ -149,7 +165,7 @@ $cnn = mysqli_connect("localhost", "root", "", "smart-hostel") or die("not conne
                     <br>
                     <h3>Document Upload</h3>
                     <div class="part-box">
-                        
+
                         <div class="one-line">
                             <label>Passport Size Photo</label>
                             <input type="file" name="passport_photo" accept="image/*" required>
@@ -190,13 +206,13 @@ $cnn = mysqli_connect("localhost", "root", "", "smart-hostel") or die("not conne
                             </label>
                         </div>
                     </div>
-                    
+
 
 
                     <div class="sbm"> <input type="submit" name="submit" value="Submit Admission" id="submitBtn" disabled> <input type="reset" value="↻ reset-form" id="reset"> </div>
-                   
 
-                    
+
+
 
 
 
@@ -233,8 +249,30 @@ $cnn = mysqli_connect("localhost", "root", "", "smart-hostel") or die("not conne
 
 
 <?php
+
 if (isset($_POST['submit'])) {
 
+    $student_id = $_POST['student_id'];
+
+    
+    $check = mysqli_query($cnn, "SELECT * FROM users WHERE student_id = '$student_id'");
+
+    if (mysqli_num_rows($check) == 0) {
+        
+        echo "<script>
+        alert('Invalid Student ID! Please enter valid Student ID.');
+        window.history.back();
+    </script>";
+        exit;
+    }
+    if (mysqli_num_rows($check) > 0) {
+    
+    echo "<script>
+        alert('This Student ID is already registered!');
+        window.history.back();
+    </script>";
+    exit;
+}
 
     $full_name = $_POST['full_name'];
 
@@ -270,7 +308,7 @@ if (isset($_POST['submit'])) {
     move_uploaded_file($_FILES['aadhar_card']['tmp_name'], $aadhar_path);
     move_uploaded_file($_FILES['marksheet']['tmp_name'], $marksheet_path);
 
-
+    $student_id = $_POST['student_id'];
     $gender = $_POST['gender'];
     $date_of_birth = $_POST['date_of_birth'];
     $mobile_number = $_POST['mobile_number'];
@@ -296,13 +334,13 @@ if (isset($_POST['submit'])) {
 
 
     $insertt = "INSERT INTO student_admission (
-        full_name, gender, date_of_birth, mobile_number, email,
+        full_name,student_id, gender, date_of_birth, mobile_number, email,
         city, state, college_name, year_sem, enrollment_no,
         course_name, room_number, admission_date, duration,
         guardian_name, relation, guardian_mobile, emergency_contact,
         passport_photo, aadhar_card, marksheet
     ) VALUES (
-        '$full_name', '$gender', '$date_of_birth', '$mobile_number', '$email',
+        '$full_name','$student_id', '$gender', '$date_of_birth', '$mobile_number', '$email',
         '$city', '$state', '$college_name', '$year_sem', '$enrollment_no',
         '$course_name', '$room_number', '$admission_date', '$duration',
         '$guardian_name', '$relation', '$guardian_mobile', '$emergency_contact',
@@ -316,7 +354,7 @@ if (isset($_POST['submit'])) {
 
 
         <script>
-            alert("stuent registration Successfull  🎊");
+            alert("stuent registration Successfull !");
             window.location.href = "http://localhost/php/php_/hostel-management-system/index.php";
         </script>
 

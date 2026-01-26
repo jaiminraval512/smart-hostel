@@ -1,8 +1,8 @@
 <?php
     session_start();
-    $user = isset($_SESSION['user']) ? $_SESSION['user'] : null;
+    $user = isset($_SESSION['student_id']) ? $_SESSION['student_id'] : null;
 ?>
-?>
+
 <header>
     <div class="logo">
         <a href="http://localhost/php/php_/hostel-management-system/index.php">

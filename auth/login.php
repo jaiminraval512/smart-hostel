@@ -25,7 +25,7 @@ session_start();
             <form action="">
                 <h2 class="h2">Login | Sign in</h2>
                 <p class="login-p">Enter your credentials to access the dashboard.</p>
-                <input type="text" placeholder="enter user id :" name="user_id"  class="inp inp1 " required><br>
+                <input type="text" placeholder="enter student id :" name="user_id"  class="inp inp1 " required><br>
                 <input type="password" name="password"  placeholder="enter password :" class="inp inp2" required><br>
                 <input type="submit" value="submit" name="submit" class="inp" class="inp3">
                 <p class="user">New User?<a href="http://localhost/php/php_/hostel-management-system/auth/register.php">Signup</a></p>
@@ -41,10 +41,10 @@ session_start();
 
 if (isset($_REQUEST['submit'])) {
     extract($_REQUEST);
-    $select = "select * from users where user_id='$user_id'and password='$password'";
+    $select = "select * from users where student_id='$user_id'and password='$password'";
     $input = mysqli_query($cnn, $select);
     if (mysqli_num_rows($input) > 0) {
-        $_SESSION['user'] = $user_id;
+        $_SESSION['student_id'] = $user_id;
         header("Location:/php/php_/hostel-management-system/index.php?name=" . $user_id);
         exit();
     } else {

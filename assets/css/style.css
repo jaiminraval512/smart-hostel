@@ -653,7 +653,8 @@ imgg2 {
 }
 .main-content>h1{
     text-align: center;
-    margin: 10px 0px;
+    margin-top: 6vh;
+    margin-bottom: 5vh;
     color: #0F172A;
     font-weight: 600;
 }

@@ -1,7 +1,7 @@
 <?php
 include "../sql/db.php";
 
-$sql = "SELECT full_name, enrollment_no, room_number 
+$sql = "SELECT full_name, student_id, room_number 
         FROM student_admission";
 
 $result = mysqli_query($cnn, $sql);
@@ -31,7 +31,7 @@ if (!$result) {
             <table cellpadding="10" cellspacing="0" width="100%" border="1">
                 <thead>                <tr>
                     <th>Name</th>
-                    <th>Enrollment No</th>
+                    <th>student id </th></th>
                     <th>Room</th>
                     <th>Action</th>
                 </tr>
@@ -40,10 +40,10 @@ if (!$result) {
                 <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                     <tr>
                         <td><?php echo $row['full_name']; ?></td>
-                        <td><?php echo $row['enrollment_no']; ?></td>
+                        <td><?php echo $row['student_id']; ?></td>
                         <td><?php echo $row['room_number']; ?></td>
                         <td>
-                            <a href="student_view.php?id=<?php echo $row['enrollment_no']; ?>">
+                            <a href="student_view.php?id=<?php echo $row['student_id']; ?>">
                                 View Details
                             </a>
                         </td>

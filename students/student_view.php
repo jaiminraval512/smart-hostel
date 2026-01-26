@@ -6,7 +6,7 @@ if (!isset($_GET['id'])) {
     exit;
 }
 $id = $_GET['id'];
-$sql = " select * from student_admission where enrollment_no='$id' ";
+$sql = " select * from student_admission where student_id='$id' ";
 $result = mysqli_query($cnn, $sql);
 if (!$result) {
     die("Query Failed: " . mysqli_error($cnn));
