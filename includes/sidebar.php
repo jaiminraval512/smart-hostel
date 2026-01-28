@@ -14,7 +14,7 @@
             </a>
         </li>
 
-        <li><i class="fas fa-money-bill"></i> Fees</li>
+        <li><i class="fas fa-money-bill"><a href="http://localhost/php/php_/hostel-management-system/fees/add_fee.php"></i> Fees</li></a>
         <li><i class="fas fa-sign-out-alt"></i> <a href="http://localhost/php/php_/hostel-management-system/logout.php" id="user">Logout</a></li>
 
     </ul>

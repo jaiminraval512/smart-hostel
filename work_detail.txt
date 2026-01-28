@@ -153,3 +153,33 @@ This feature helps the admin to view individual student records in a proper and 
 
 This is an important step toward building a complete student management system inside the hostel management system.
 ----------------------------------------------------------------------------------------------------------------
+
+day 20 : 26 jan
+Today, I worked on the student detail page that I had created earlier. I fixed the proper alignment of the page and styled it using CSS.
+
+I divided all the student information into different sections and designed each section properly. This made the layout more structured, clear, and easy to read.
+
+These changes improved the overall look of the page and made the student details easier to view and manage for the admin
+
+---------------------------------------------------------------------------------------------------------------------------
+
+day 21 : 27 jan  
+
+Today, I updated the student detail page by adding a Documents section below the student information.
+
+I displayed the profile picture directly on the page. For the other two documents, I added a View Document option. Each option is linked with the image or file URL so that when the admin clicks on it, the document opens on a new page.
+
+This makes it easy for the admin to view and verify student documents without downloading them.
+
+This improvement helps make the student management system more complete and practical for real use.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+day 22 : 28 jan 
+
+Today, I made many important small changes in the project. One of the main changes was that now only a logged-in user can access the registration page. If a user is not logged in, they are automatically redirected to the login page.
+
+I implemented this functionality using sessions across different pages to manage user access properly. This ensures better security and proper flow of the system.
+
+These small but important improvements make the system more secure, structured, and user-friendly, and help in building a more professional hostel management system.
+--------------------------------------------------------------------------------------------------------------------------------
