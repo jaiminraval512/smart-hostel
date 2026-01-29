@@ -183,3 +183,12 @@ I implemented this functionality using sessions across different pages to manage
 
 These small but important improvements make the system more secure, structured, and user-friendly, and help in building a more professional hostel management system.
 --------------------------------------------------------------------------------------------------------------------------------
+day 23 : 29 jan
+Today, I created the Student Fee Section in the system. After a student completes the registration form, they are required to pay the hostel fees. For this, I added a separate option that the student can click to go to the fee payment section.
+
+In this section, I added a QR code so that students can scan it and pay the fees online. After making the payment, the student has to enter the transaction ID and submit the form.
+
+After submission, the admin will check the transaction details and verify the payment. Once verified, the admin will mark the fee as paid, and then the further process will continue.
+
+This feature is currently in progress, and I will continue working on it in the coming days.
+-----------------------------------------------------------------------------------------------------------------------------------

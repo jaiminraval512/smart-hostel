@@ -9,22 +9,21 @@ if (!isset($_SESSION['student_id'])) {
 
 $student_id = $_SESSION['student_id'];
 
-// 1. Pehle check karein ki kya record exist karta hai?
 $q = mysqli_query($cnn, "SELECT * FROM student_fees WHERE student_id='$student_id'");
 $fee = mysqli_fetch_assoc($q);
 
-// 2. AGAR RECORD NAHI MILA, TO NAYA BANAO (Auto-Create)
+
 if (!$fee) {
     $admission_date = date('Y-m-d');
     $due_date = date('Y-m-d', strtotime('+15 days'));
     $fixed_fee = 30000;
 
-    // Naya record insert karein
+    
     $ins = mysqli_query($cnn, "INSERT INTO student_fees (student_id, admission_date, due_date, fixed_fee, status) 
                                VALUES ('$student_id', '$admission_date', '$due_date', '$fixed_fee', 'unpaid')");
     
     if($ins) {
-        // Dubara fetch karein naye record ko
+        
         $q = mysqli_query($cnn, "SELECT * FROM student_fees WHERE student_id='$student_id'");
         $fee = mysqli_fetch_assoc($q);
     } else {
@@ -32,7 +31,7 @@ if (!$fee) {
     }
 }
 
-// 3. Status checks
+
 if ($fee['status'] == 'paid') {
     echo "<div style='text-align:center;margin-top:50px;'><h2>Fees Already Paid ✅</h2></div>";
     exit;
