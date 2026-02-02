@@ -14,9 +14,10 @@
 
     <?php include "includes/header.php"; ?>
     <div class="dashboard-layout">
-
-        <?php include "includes/sidebar.php"; ?>
+ <?php include "includes/sidebar.php"; ?>
+        
         <main class="main-content" name="main-content">
+           
             <div class="hero">
                 <div class="img">
                     <img src="assets/images/hostel_photo.jpg" width="100%" alt="img" class="img">

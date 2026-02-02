@@ -172,11 +172,17 @@ $cnn = mysqli_connect("localhost", "root", "", "smart-hostel") or die("not conne
                                 <input type="checkbox" id="agree_damage" class="check">
                                 I am responsible for any damage caused to hostel property.
                             </label><br>
+                            <label id="rull">
+                                <input type="checkbox" id="paid_rule" class="check">
+                               <strong>Note:</strong> The hostel fee must be paid within 15 days of admission; otherwise, the admission will be automatically cancelled. The student will be held fully responsible for this.
+                            </label><br>
 
                             <label id="rull">
                                 <input type="checkbox" id="agree_refund" class="check">
                                 Hostel fees are non-refundable as per hostel policy.
                             </label>
+   
+</div>
                         </div>
                     </div>
 

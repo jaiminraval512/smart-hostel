@@ -192,3 +192,27 @@ After submission, the admin will check the transaction details and verify the pa
 
 This feature is currently in progress, and I will continue working on it in the coming days.
 -----------------------------------------------------------------------------------------------------------------------------------
+
+day 24 : 30 jan 
+Today, I worked on the student fee submission process. When a student enters the transaction ID and submits the form after making the online payment, I implemented a system to send this data to the admin panel using sessions.
+
+This allows the admin to receive and view the transaction details properly for verification. The data flow from the student side to the admin side is now managed through sessions, which helps in maintaining secure and smooth communication between both modules.
+
+This improvement is an important step in completing the fee management system and making the admin verification process more structured and reliable.
+-----------------------------------------------------------------------------------------------------------------------------------
+day 25 : 1 feb 
+
+Today, I worked on the fee management section in the admin panel. I created a table where the admin can view fee payment details submitted by students.
+
+In this table, I displayed information such as student ID, student name, and transaction ID. I also added a “Mark as Paid” option. When the admin selects this option, the student’s fee status is updated and marked as paid in the system.
+
+This feature helps the admin easily verify and manage student fee payments, making the fee management process more organized and efficient
+-------------------------------------------------------------------------------------------------------------------------------------
+
+day 26 : 2 feb 
+Today, I designed the student fee payment page that I had created earlier. I improved its layout and appearance using CSS to make it more user-friendly.
+
+I also added an option for offline fee payment inside the same page so that students can choose between online and offline payment methods. Along with this, I made all the necessary changes in the admin table to manage and display both online and offline fee details properly.
+
+These updates make the fee management system more flexible and convenient for both students and the admin.
+--------------------------------------------------------------------------------------------------------------------------

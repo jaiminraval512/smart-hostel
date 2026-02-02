@@ -48,7 +48,9 @@ if (isset($_REQUEST['submit'])) {
         header("Location:/php/php_/hostel-management-system/index.php?name=" . $user_id);
         exit();
     } else {
-        $error = "Invalid username or password!";
+        echo"<script>
+            alert('please enter enter valid username and password !');
+        </script>";
     }
 }
 ?>

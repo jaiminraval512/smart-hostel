@@ -23,7 +23,7 @@
                  <li><a href="">Login</a></li>
              </ul>
          </div>
-         <div class="footer-contact">
+         <div class="footer-contact" id="contact-us">
              <h4>Contact Us</h4>
              <p>Email: support@smarthostel.com</p>
              <p>Phone: +91-9714626549</p>
