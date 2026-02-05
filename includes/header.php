@@ -1,3 +1,5 @@
+
+
 <?php
 session_start();
 $user = isset($_SESSION['student_id']) ? $_SESSION['student_id'] : "Guest";
@@ -6,9 +8,9 @@ $user = isset($_SESSION['student_id']) ? $_SESSION['student_id'] : "Guest";
 <header id="main-header">
 
     <div id="logo-box" class="logo-box">
-        <a id="logo-link" href="http://localhost/php/php_/hostel-management-system/index.php">
+        <a id="logo-link" href="../index.php">
             <img id="logo-img"
-                 src="/php/php_/hostel-management-system/assets/images/logo-removebg-preview (1).png"
+                 src="/php/php_/smart-hostel/smart-hostel/assets/images/logo-removebg-preview (1).png"`
                  alt="Logo">
         </a>
     </div>
@@ -31,7 +33,7 @@ $user = isset($_SESSION['student_id']) ? $_SESSION['student_id'] : "Guest";
                 <span id="username"><?php echo $user; ?></span>
 
                 <a id="login-link"
-                   href="http://localhost/php/php_/hostel-management-system/auth/Login.php">
+                   href="auth/login.php">
 
                     <i class="fas fa-user-circle" id="user-icon"></i>
 

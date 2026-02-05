@@ -15,7 +15,7 @@
 </li>
 
 <li class="side-item">
-<a href="http://localhost/php/php_/hostel-management-system/students/add_student.php">
+<a href="../smart-hostel/students/add_student.php">
     <i class="fas fa-user-plus"></i>
     <span>Admission-form</span>
 </a>
@@ -39,14 +39,14 @@
 </li>
 
 <li class="side-item">
-<a href="http://localhost/php/php_/hostel-management-system/fees/add_fee.php">
+<a href="../smart-hostel/fees/add_fee.php">
     <i class="fas fa-money-bill"></i>
     <span>Fees</span>
 </a>
 </li>
 
 <li class="side-item logout">
-<a href="http://localhost/php/php_/hostel-management-system/logout.php">
+<a href="../smart-hostel/logout.php">
     <i class="fas fa-sign-out-alt"></i>
     <span>Logout</span>
 </a>

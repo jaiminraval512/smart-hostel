@@ -9,7 +9,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="/php/php_/hostel-management-system/assets/css/style.css">
+     <link rel="stylesheet" href="../assets/css/style.css">
     <title>Sign-In</title>
 </head>
 
@@ -18,7 +18,7 @@ session_start();
         <div class="login-content">
             <h2>Welcome to Smart-Hostel</h2><br>
             <p class="first-p">Manage student accommodation, room allocation, complaints, and leave records efficiently with our Hostel Management System.</p>
-            <img src="/php/php_/hostel-management-system/assets/images/login_graphic_2-removebg-preview.png" alt="img" height="250px" class="imgg2">
+            <img src="../assets/images/login_graphic_2-removebg-preview.png" alt="img" height="250px" class="imgg2">
             <p class="second-p">© 2026 Hostel Management System</p>
         </div>
         <div class="login">
@@ -28,7 +28,7 @@ session_start();
                 <input type="text" placeholder="enter student id :" name="user_id"  class="inp inp1 " required><br>
                 <input type="password" name="password"  placeholder="enter password :" class="inp inp2" required><br>
                 <input type="submit" value="submit" name="submit" class="inp" class="inp3">
-                <p class="user">New User?<a href="http://localhost/php/php_/hostel-management-system/auth/register.php">Signup</a></p>
+                <p class="user">New User?<a href="register.php">Signup</a></p>
             </form>
         </div>
     </div>
@@ -45,7 +45,7 @@ if (isset($_REQUEST['submit'])) {
     $input = mysqli_query($cnn, $select);
     if (mysqli_num_rows($input) > 0) {
         $_SESSION['student_id'] = $user_id;
-        header("Location:/php/php_/hostel-management-system/index.php?name=" . $user_id);
+        header("Location:../index.php?name=" . $user_id);
         exit();
     } else {
         echo"<script>

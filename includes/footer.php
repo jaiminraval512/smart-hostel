@@ -4,7 +4,7 @@
 
 
          <div class="footer-about">
-             <img src="http://localhost/php/php_/hostel-management-system/assets/images/white_logo.png
+             <img src="/php/php_/smart-hostel/smart-hostel/assets/images/white_logo.png
 " alt="logo">
 
 
@@ -42,6 +42,7 @@
              <a href="#"><i class="fab fa-linkedin-in"></i></a>
              <a href="#"><i class="fab fa-twitter"></i></a>
          </div>
+         <div></div>
      </div>
 
  </footer>
