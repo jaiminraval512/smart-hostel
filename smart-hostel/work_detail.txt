@@ -1,0 +1,218 @@
+day : 1 
+
+Today, I checked how a hostel management system website usually looks. After that, I created a logo for my website. Then I made the folder structure according to the internship requirements.
+
+After that, I created the header and footer for the hostel management system. I added the logo and some quick links in the header and applied CSS to it. I also designed the footer using CSS. Finally, I included both the header and footer files in the index.php file so they appear on the home page.
+
+---------------------------------------------------------------------------------------------
+
+day :2
+Yesterday, I completed the header and footer. Today, I designed the sidebar. In the sidebar, I added options like Home, Student, Student Registration Form, Rooms, Student Attendance, Fees, and Logout.
+
+Today, I only created these options. I will create all the pages later and also add more options to the sidebar in the future.
+----------------------------------------------------------------------------------------------------------
+
+day :3 
+
+Today, I created the user login system for my Smart Hostel (Hostel Management System).
+
+First, I created the login structure using HTML. After that, I went to phpMyAdmin and created a database named Hostel Management System. Then, inside the database, I created a table named users. In this table, I added fields such as user_id, user name, email, mobile number, and password.
+
+After that, I connected the login and register files with the database. Then, I designed both the login and register pages using CSS.
+
+Finally, I created a logout file, added the logout query, and linked the logout option to the logout file so that the user can log out properly.
+---------------------------------------------------------------------------------------------------------------------------------
+day :4
+
+Yesterday, I completed the login page and registration page. Today, I started working on the home page. First, I created a hero section on the home page and added an image to it. From this section, when a student clicks on the Book Now button, it will open the hostel registration page, which I will create later.
+
+Below the hero section, I created a features section and added six cards to it.
+
+Today, I worked only on these parts.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+day : 5 
+
+Yesterday, I had completed only half of the home page. Today, I continued working on it and developed it further.
+
+Since all the sections were coming together, I created a separate div between the sections to maintain proper spacing and separation.
+
+After that, I designed all the content properly, added box shadows around the boxes, and improved the website to make it more user-friendly.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+day : 6
+
+Today, I worked on improving the existing project based on the work completed in the previous days. I made small changes in the folder structure and organized the files properly. I also updated some sections of the home page to improve spacing and alignment. Along with this, I made minor design changes in the header, sidebar, and content area to make the layout more clean and user-friendly. These small improvements helped make the website look better and more structured.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+day :7 
+
+Today, I created a student registration form that allows students to take admission in the hostel.
+
+I connected this form with the database so that the data can be stored properly. The form was connected to the database because, in the future, an admin panel will be developed to manage all student records easily.
+
+At present, I have only created the form. Tomorrow, I will add a file upload feature so that students can upload their documents.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+day : 8
+
+Yesterday, I created the student registration form. Today, I added document upload options to the form. I included options to upload a passport-size photo, Aadhar card, school/college bonafide certificate, and the previous year’s marksheet. I also made all these document uploads mandatory.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+day : 9
+
+Today, I continued working on the student registration page that I had started earlier. I added a Terms and Conditions section at the bottom of the page. Then, I added JavaScript to the submit button so that the submit button appears and the form can be submitted only when the student accepts all the terms and conditions.
+
+---------------------------------------------------------------------------------------------------------------------------------------
+day : 10
+
+Today, I worked on the student admission form page. I fixed the alignment of the page and arranged all the input fields properly. After that, I added a reset button next to the submit button so that the form can be reset when needed.
+
+After completing these changes, I designed the page using CSS to improve its overall look and layout.
+-----------------------------------------------------------------------------------------------------------------------------------------
+day: 11 date : 15-jan
+
+Earlier, I had created the student registration form. Today, I started working on the weekly food menu page for the hostel.
+
+First, I prepared the menu based on my own planning. After that, I created the complete menu in a table format.
+
+Then, I fixed the alignment of the entire page and designed the table properly. In the table header, I divided it into four parts: Day, Breakfast, Lunch, and Dinner. In the table body, I used table rows to add all the days and their respective menus.
+
+Today, I completed the page using only HTML. Tomorrow, I will design it using CSS.
+-------------------------------------------------------------------------------------------------------------------------------------------
+day 12 : 16 jan 
+
+Yesterday, I had created the weekly food menu page and written it using HTML. Today, I designed the same page using CSS. I applied different background colors to the table header and table body to clearly separate them. I also styled the day column with a different color so that it stands out from the rest of the menu.
+
+In addition to this, I added hover effects using CSS transform properties to improve the user experience and make the table more interactive. These styling changes helped make the weekly menu page more attractive, organized, and easy to read.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+day 13 : 17 jan 
+
+
+Yesterday, I had created the weekly mess menu table. Today, I added a new section below the table.
+
+First, I added the meal timings so that users can easily check the breakfast, lunch, and dinner schedule. This helps students understand the daily food timings clearly.
+
+Below the timings section, I added the food-related terms and conditions to inform students about the rules and guidelines for mess usage. These additions make the page more informative and helpful for users.
+
+Overall, this new section improves clarity and provides complete information along with the weekly mess menu.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+day 14 : 19 jan
+Today, I designed a loader for my website. First, I added the loader code in HTML just after the body tag. After that, I styled the loader using CSS to give it a proper design and animation.
+
+Then, I wrote the logic for the loader using JavaScript. In the logic, I used an event listener so that the loader runs automatically whenever the page loads. This ensures that the loader is displayed while the page content is loading and provides a better user experience.
+
+Overall, this feature improves the look of the website and makes the loading process smoother for users.
+--------------------------------------------------------------------------------------------------------------------------------------
+day 15 : 20 jan 
+Today, I slowly started working on the admin panel. First, I checked and studied how the design and structure of an admin panel usually look. After that, I started creating the sidebar for the admin panel.
+
+As I continue creating different pages for the website, I will also manage and control all those pages through the admin panel.
+------------------------------------------------------------------------------------------------------------------------
+day 16 : 21 jan 
+
+Earlier, I had created the sidebar for the admin panel. Today, I styled the sidebar using CSS to improve its appearance. I added hover and focus effects to all the buttons so that they respond properly when the user interacts with them.
+
+These effects help make the admin panel more interactive and user-friendly. After completing this work, the sidebar looks more structured and visually clear.
+
+In the coming days, I will continue creating all the admin panel pages and gradually add more features to manage the system effectively.
+--------------------------------------------------------------------------------------------------------------------------
+day :17 22 jan 
+
+Earlier, I had created the sidebar for the admin panel, and I added a Students option in it. Today, I worked on the functionality of this option. When the admin clicks on the Students button, a page opens where the complete list of all registered students is displayed.
+
+I implemented this feature using a SELECT query to fetch student data from the database and show it in a proper list format. This helps the admin to view all student records in one place easily.
+
+This feature is an important part of the admin panel because it allows proper monitoring and management of student information. It is a step towards building a fully functional student management system inside the admin panel.
+------------------------------------------------------------------------------------------------------------------------------
+
+day 18 : 23 jan 
+
+Today, I continued working on the admin panel. I focused on improving the Students section of the admin panel. When the admin clicks on the Students button, a complete list of all registered students is displayed on the screen.
+
+I implemented this functionality using a SELECT query to fetch all student data from the database and display it properly on the page. This allows the admin to view and manage student information easily.
+
+After that, I designed the entire students list page using CSS. I improved the layout, alignment, and overall appearance to make the page clean, clear, and user-friendly.
+
+This work helps make the admin panel more functional and structured, and it is an important step toward building a complete hostel management system.
+------------------------------------------------------------------------------------------------------------------------
+day 19 :24 jan
+Yesterday, I created the students list page in the admin panel and designed it using CSS. Today, I added a “View Info” option to each student record.
+
+When the admin clicks on the View Info button, a new page opens where all the details filled by that student are displayed clearly. This includes the complete information submitted during the registration process.
+
+This feature helps the admin to view individual student records in a proper and organized way. It improves data management and makes the admin panel more functional and user-friendly.
+
+This is an important step toward building a complete student management system inside the hostel management system.
+----------------------------------------------------------------------------------------------------------------
+
+day 20 : 26 jan
+Today, I worked on the student detail page that I had created earlier. I fixed the proper alignment of the page and styled it using CSS.
+
+I divided all the student information into different sections and designed each section properly. This made the layout more structured, clear, and easy to read.
+
+These changes improved the overall look of the page and made the student details easier to view and manage for the admin
+
+---------------------------------------------------------------------------------------------------------------------------
+
+day 21 : 27 jan  
+
+Today, I updated the student detail page by adding a Documents section below the student information.
+
+I displayed the profile picture directly on the page. For the other two documents, I added a View Document option. Each option is linked with the image or file URL so that when the admin clicks on it, the document opens on a new page.
+
+This makes it easy for the admin to view and verify student documents without downloading them.
+
+This improvement helps make the student management system more complete and practical for real use.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+day 22 : 28 jan 
+
+Today, I made many important small changes in the project. One of the main changes was that now only a logged-in user can access the registration page. If a user is not logged in, they are automatically redirected to the login page.
+
+I implemented this functionality using sessions across different pages to manage user access properly. This ensures better security and proper flow of the system.
+
+These small but important improvements make the system more secure, structured, and user-friendly, and help in building a more professional hostel management system.
+--------------------------------------------------------------------------------------------------------------------------------
+day 23 : 29 jan
+Today, I created the Student Fee Section in the system. After a student completes the registration form, they are required to pay the hostel fees. For this, I added a separate option that the student can click to go to the fee payment section.
+
+In this section, I added a QR code so that students can scan it and pay the fees online. After making the payment, the student has to enter the transaction ID and submit the form.
+
+After submission, the admin will check the transaction details and verify the payment. Once verified, the admin will mark the fee as paid, and then the further process will continue.
+
+This feature is currently in progress, and I will continue working on it in the coming days.
+-----------------------------------------------------------------------------------------------------------------------------------
+
+day 24 : 30 jan 
+Today, I worked on the student fee submission process. When a student enters the transaction ID and submits the form after making the online payment, I implemented a system to send this data to the admin panel using sessions.
+
+This allows the admin to receive and view the transaction details properly for verification. The data flow from the student side to the admin side is now managed through sessions, which helps in maintaining secure and smooth communication between both modules.
+
+This improvement is an important step in completing the fee management system and making the admin verification process more structured and reliable.
+-----------------------------------------------------------------------------------------------------------------------------------
+day 25 : 1 feb 
+
+Today, I worked on the fee management section in the admin panel. I created a table where the admin can view fee payment details submitted by students.
+
+In this table, I displayed information such as student ID, student name, and transaction ID. I also added a “Mark as Paid” option. When the admin selects this option, the student’s fee status is updated and marked as paid in the system.
+
+This feature helps the admin easily verify and manage student fee payments, making the fee management process more organized and efficient
+-------------------------------------------------------------------------------------------------------------------------------------
+
+day 26 : 2 feb 
+Today, I designed the student fee payment page that I had created earlier. I improved its layout and appearance using CSS to make it more user-friendly.
+
+I also added an option for offline fee payment inside the same page so that students can choose between online and offline payment methods. Along with this, I made all the necessary changes in the admin table to manage and display both online and offline fee details properly.
+
+These updates make the fee management system more flexible and convenient for both students and the admin.
+--------------------------------------------------------------------------------------------------------------------------
