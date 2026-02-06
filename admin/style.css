@@ -333,3 +333,89 @@ tbody tr:last-child {
     width: 60%;
 }
 
+/* ===== ADMIN ATTENDANCE SECTION ===== */
+
+/* Attendance page container */
+.main> h2{
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Attendance table override */
+.main table{
+    width: 90%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+/* Table header */
+.main table th{
+    background-color: #3f4d67;   /* sidebar color match */
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+/* Table cells */
+.main table td{
+    text-align: center;
+    padding: 10px;
+}
+
+/* Hover */
+.main table tr:hover{
+    background: #f5f7ff;
+}
+
+/* Radio button */
+.main input[type="radio"]{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Save button */
+.main .btn{
+    display: block;
+    margin: 15px auto;
+    background: #04A9F5;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.main .btn:hover{
+    background: #038ed0;
+}
+
+/* Success message */
+.success{
+    text-align: center;
+    color: #0f9d58;
+    font-weight: 600;
+    margin: 10px;
+}
+
+/* Layout fix */
+.main{
+    width: 81%;
+    padding-top: 20px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+  .main{
+     width:100%;
+  }
+
+  .main table{
+     width:98%;
+  }
+
+}

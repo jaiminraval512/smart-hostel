@@ -2,7 +2,7 @@
 
 <?php
 session_start();
-$user = isset($_SESSION['student_id']) ? $_SESSION['student_id'] : "Guest";
+$user = isset($_SESSION['student_id']) ? $_SESSION['student_id'] : "Login";
 ?>
 
 <header id="main-header">
@@ -10,8 +10,8 @@ $user = isset($_SESSION['student_id']) ? $_SESSION['student_id'] : "Guest";
     <div id="logo-box" class="logo-box">
         <a id="logo-link" href="../index.php">
             <img id="logo-img"
-                 src="/php/php_/smart-hostel/smart-hostel/assets/images/logo-removebg-preview (1).png"`
-                 alt="Logo">
+     src="/php/php_/smart-hostel/assets/images/logo-removebg-preview (1).png"
+     alt="Logo">
         </a>
     </div>
 

@@ -4,7 +4,7 @@
 
 
          <div class="footer-about">
-             <img src="/php/php_/smart-hostel/smart-hostel/assets/images/white_logo.png
+             <img src="/php/php_/smart-hostel/assets/images/white_logo.png
 " alt="logo">
 
 
