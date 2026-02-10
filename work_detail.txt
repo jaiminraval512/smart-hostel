@@ -200,7 +200,7 @@ This allows the admin to receive and view the transaction details properly for v
 
 This improvement is an important step in completing the fee management system and making the admin verification process more structured and reliable.
 -----------------------------------------------------------------------------------------------------------------------------------
-day 25 : 1 feb 
+day 25 : 2 feb 
 
 Today, I worked on the fee management section in the admin panel. I created a table where the admin can view fee payment details submitted by students.
 
@@ -209,10 +209,53 @@ In this table, I displayed information such as student ID, student name, and tra
 This feature helps the admin easily verify and manage student fee payments, making the fee management process more organized and efficient
 -------------------------------------------------------------------------------------------------------------------------------------
 
-day 26 : 2 feb 
+day 26 : 3 feb 
 Today, I designed the student fee payment page that I had created earlier. I improved its layout and appearance using CSS to make it more user-friendly.
 
 I also added an option for offline fee payment inside the same page so that students can choose between online and offline payment methods. Along with this, I made all the necessary changes in the admin table to manage and display both online and offline fee details properly.
 
 These updates make the fee management system more flexible and convenient for both students and the admin.
 --------------------------------------------------------------------------------------------------------------------------
+
+day 27 : 4 feb 
+Today, I worked on two important features related to the fee payment status. I created a system to show different messages based on the admin’s verification.
+
+If a student has paid the fees but the admin has not marked it as paid yet, a pending status message will be displayed to the student. Once the admin marks the fee as paid, a confirmation message will be shown instead.
+
+This feature helps students clearly understand their fee status and makes the payment process more transparent and user-friendly
+--------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------
+day 28 : 5 feb 
+Today, I started working on making my website responsive. I began adjusting the layout so that the website can work properly on different screen sizes like mobile, tablet, and desktop. I checked the alignment of various sections and started applying responsive CSS to improve the design. This will help make the website more user-friendly and accessible on all devices
+---------------------------------------------------------------------------------------
+day 29 : 6 feb 
+Today, I started creating the student attendance page. First, I prepared the front-end design in the admin panel using HTML and then applied CSS to style the page.
+
+After that, I created a table in the database for storing attendance records and connected it with the student table using the student ID. This connection will help in managing attendance for each student properly.
+
+This is the initial step toward building a complete attendance management system in the project.
+---------------------------------------------------------------------------------
+
+day 30 : 7 feb 
+Today, I created the required tables in phpMyAdmin using PHP queries. I also implemented a feature that allows students to check their attendance after logging in with their student ID.
+
+This functionality helps students view their own attendance records easily and makes the attendance system more useful and interactive. It is an important step toward completing the student attendance module in the project.
+----------------------------------------------------------------------------
+day : 31 : 9 feb
+Today, I started converting the hostel menu from static to dynamic. First, I created a table in phpMyAdmin to store the menu data. After that, I prepared the basic structure using HTML.
+
+Then, I implemented an update option by using an UPDATE query, so that the menu can be changed easily from the admin side. This will allow the admin to modify the hostel menu whenever required instead of keeping it fixed.
+
+This is an important step toward making the system more flexible and dynamic.
+
+
+
+----------------------------------------------------------------------------------------
+
+day 32 : 10 feb 
+Today, I completed the remaining CSS work for the project. I applied CSS to all the pages that were still pending in terms of design and styling.
+
+This helped in improving the overall look and consistency of the website. After these changes, all the pages now have a proper design and a better user interface.
+-------------------------------------------------------------------------------------------------
+

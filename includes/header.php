@@ -8,7 +8,7 @@ $user = isset($_SESSION['student_id']) ? $_SESSION['student_id'] : "Login";
 <header id="main-header">
 
     <div id="logo-box" class="logo-box">
-        <a id="logo-link" href="../index.php">
+        <a id="logo-link" href="/php/php_/smart-hostel/index.php">
             <img id="logo-img"
      src="/php/php_/smart-hostel/assets/images/logo-removebg-preview (1).png"
      alt="Logo">

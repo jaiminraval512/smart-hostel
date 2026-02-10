@@ -1,421 +1,1088 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-
-*{
+/* ============================================================
+   1. GLOBAL RESET & BASE STYLES
+   ============================================================ */
+* {
     margin: 0;
     padding: 0;
-   font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
-.ad_side{
-    
 
-    width: 19%;
-    background-color:rgb(63, 77, 103);
-    /* position: relative; */
+body {
+    background-color: #f4f7fa; /* Light background for dashboard */
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* ============================================================
+   2. MAIN CONTAINER (Sidebar + Content side-by-side)
+   ============================================================ */
+.main_container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: sticky;
-    top: 0;
+    min-height: 100vh;
+}
+
+/* ============================================================
+   3. SIDEBAR STYLING (START)
+   ============================================================ */
+.sidebar {
+    width: 260px;
+    background-color: #1a2238; /* Dark Navy Blue */
+    color: #ffffff;
+    position: fixed;
     height: 100vh;
-    
-}
-.ad_logo{
-    display: flex;
-    justify-content: center;
-}
- img{
-    height: 10vh;
-    margin-top: 4vh;
-    
-
-
-
-    
-}
-.main{
-    background-color: #f4f7f6;
-}
-
-li>a{
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    list-style-type: none;
-    font-size: 1rem;
-    opacity: 0.9;
-    gap: 0.5vw;
-    margin-bottom: 2vh;
-    margin-right: 5.5vw;
-
-    
-}
-li{
-
     display: flex;
     flex-direction: column;
-    padding: 10px 0px;
-
-
-
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
 }
-ul{
-    margin-top: 10vh;
+
+/* Sidebar Logo */
+.sidebar-logo {
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+    flex-grow: 1;
+    padding: 20px 0;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav ul li {
     width: 100%;
 }
-li a{
 
+.sidebar-nav ul li a {
     display: flex;
-   margin-left: 2vw;
-   
-
-
-}
-li a i {
-   
-    width: 30px; 
-    
-}
-li:hover{
-    background-color:#5B6B79;
-}
-li:active, li:focus-within {
-    background-color: rgb(38, 53, 80);
-    border: 2px solid rgb(38, 53, 80);
-    border-bottom-right-radius: 60px;
-    border-top-right-radius:60px;
-    border-left: 4px solid #04A9F5;
+    align-items: center;
+    padding: 15px 25px;
+    color: #a0aec0; /* Muted light grey */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    font-weight: 500;
 }
 
-.main{
-    display: flex;
-}
-.content{
-    width: 81%;
-    margin-top: 30vh;
-    
-}
-
-.cards{
-    display: flex;
-    width: 81%;
-    height: fit-content;
-    padding: 10vh;
-     gap: 20px;
-}
-.card1{
-    height: 20vh;
-    width: 20vw;
-    /* border: 1px solid black; */
-     background-color: #85409D;
-     border-radius: 10px;
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
-    /* opacity: 0.8; */
-     
-    
-}
-.card1>i{
-    padding: 16px;
-   background-color: white;
-   border-radius: 20%;
-   color: #85409D;
-   /* height: 20px;
-   width: 20px; */
-
-}
-.detail{
-    color: white;
-
-}
-.detail>span{
-    text-transform: uppercase;
-}
-.detail .char{
+/* Icons Aligning */
+.sidebar-nav ul li a i {
+    width: 30px; /* Fixed width for icon alignment */
+    font-size: 18px;
+    margin-right: 10px;
     text-align: center;
 }
 
-
-/* view student.php */
-.table{
-    width: 81%;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    margin-top: 20vh;
-}
-
-
-
-h2 {
-    color: #1f2937;
-    font-size: 24px;
-    
-    margin-bottom: 20px; 
-    /* border-left: 5px solid #4f46e5; */
-    padding-left: 15px;
-    text-align: center;
-}
-
-table {
-   background-color: #f0eeee;
-    width: 70%;
-    border-collapse: collapse;
-    /* margin-top: 20vh;     */
-    border: none;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-thead th {
-    background-color: #1f2937;
+/* Hover & Active States */
+.sidebar-nav ul li a:hover {
     color: #ffffff;
-    text-align: left;
-    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-nav ul li a.active {
+    color: #ffffff;
+    background-color: #3b82f6; /* Modern Blue */
+    border-left: 5px solid #ffffff;
+}
+
+/* Sidebar Footer (Logout) */
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-footer a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #f87171; /* Red for logout */
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.sidebar-footer a:hover {
+    background-color: rgba(248, 113, 113, 0.1);
+    border-radius: 8px;
+}
+/* --- SIDEBAR STYLING (END) --- */
+
+
+/* ============================================================
+   4. MAIN CONTENT AREA (START)
+   ============================================================ */
+.content_body {
+    margin-left: 260px; /* Leave space for fixed sidebar */
+    width: calc(100% - 260px);
+    padding: 40px;
+}
+
+/* Header Title */
+.top_header {
+    margin-bottom: 40px;
+}
+
+.top_header h1 {
+    font-size: 26px;
+    color: #1a2238;
+    font-weight: 700;
+}
+
+/* Dashboard Cards Grid */
+.cards_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Individual Stat Card */
+.stat_card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card_info .label {
+    display: block;
+    color: #718096;
+    font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.card_info .count {
+    display: block;
+    font-size: 35px;
+    font-weight: 800;
+    color: #1a2238;
+    margin-top: 5px;
+}
+
+/* Icon Containers */
+.card_icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.student_bg {
+    background-color: #e0e7ff;
+    color: #4338ca;
+}
+
+.user_bg {
+    background-color: #ffedd5;
+    color: #d97706;
+}
+/* --- MAIN CONTENT AREA (END) --- */
+
+
+/* ============================================================
+   5. RESPONSIVE DESIGN (For Tablets & Mobile)
+   ============================================================ */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 80px;
+    }
+    .sidebar-logo img {
+        width: 40px;
+    }
+    .sidebar-nav ul li a span, 
+    .sidebar-footer a span {
+        display: none; /* Hide text on smaller screens */
+    }
+    .sidebar-nav ul li a i {
+        margin-right: 0;
+        font-size: 20px;
+    }
+    .content_body {
+        margin-left: 80px;
+        width: calc(100% - 80px);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards_container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
+   FEES TABLE PAGE STYLING (START)
+   ============================================================ */
+
+/* Table Container Wrapper */
+.table_container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    overflow-x: auto; /* Mobile par table scroll ho sake */
+    margin-top: 20px;
+}
+
+/* Main Table Styling */
+.fees_table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.fees_table thead tr {
+    background-color: #f8fafc;
+    border-bottom: 2px solid #edf2f7;
+}
+
+.fees_table th {
+    padding: 15px;
+    color: #4a5568;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-thead th:first-child {
-    border-top-left-radius: 10px;
-}
-
-thead th:last-child {
-    border-top-right-radius: 10px;
-}
-
-tbody tr {
-    border-bottom: 1px solid #edf2f7;
-    transition: background 0.2s;
-
-}
-
-tbody tr:hover {
-    background-color: #f9fafb;
-}
-
-tbody td {
+.fees_table td {
     padding: 15px;
-    color: #4b5563;
+    border-bottom: 1px solid #edf2f7;
+    color: #2d3748;
     font-size: 15px;
 }
 
-tbody tr:last-child {
-    border-bottom: none;
+/* Table Row Hover */
+.fees_table tbody tr:hover {
+    background-color: #f7fafc;
 }
 
-.table a {
-    text-decoration: none;
-    background-color: #4f46e5;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 6px;
+/* Amount Styling */
+.amount {
+    font-weight: 700;
+    color: #2d3748;
+}
+
+/* Badge Styling (Online/Cash) */
+.badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.online {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.cash {
+    background-color: #f0fdf4;
+    color: #16a34a;
+}
+
+/* Reference Number Styling */
+.ref_no {
+    font-family: 'Courier New', Courier, monospace;
     font-size: 13px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    display: inline-block;
+    color: #718096;
 }
 
-.table a:hover {
-    background-color: #4338ca;
-    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
-    transform: translateY(-1px);
-}
-
-/* student view */
-
-.detail-box{
-    width: 81%;
-    display: flex;
-    justify-content: center;
-    height: fit-content;
-    background-color: #e9e9e9;
-
-}
-.student-con{
-    margin-top: 10vh;
-    width: 60%;
-    /* border: 1px solid black; */
-    border-radius: 30px;
-    padding: 30px;
-    height: 100%;
-     background: #fff;
-     margin-bottom: 10vh;
-    
-
-    
-    
-}
-.student-con>h1{
-    text-transform: uppercase;
-    text-align: center;
-     
-
-}
-
-.boxx{
-    width: 100%;
-    margin-top: 5vh;
-}   
-.boxx>.field-group{
-    width: 100%;
-    display: flex;
-
-}
-.boxx>h3{
-    margin-bottom: 2vh;
-    border-left:5px solid #4f46e5;
-    padding-left: 10px;
-    text-transform: uppercase;
-}
-.field-group>.label{
-    width: 60%;
-    
-}
-.field-group>div{
-    border-bottom: 2px solid rgb(165, 159, 159);
-    
-    margin: 3px 0px;
-}
-
-.field-group>.value{
-    width: 40%;
-
-}
-
-.doc-group {
-    padding: 15px 0; 
-    display: flex;
-    align-items: center; 
-}
-
-.doc-group img {
-    border-radius: 12px;
-    border: 3px solid #f3f4f6;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-}
-
-.doc-group img:hover {
-    transform: scale(1.1) rotate(2deg); 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.doc-group > .value > a {
-    text-decoration: none;
-    color: white;
-    padding: 8px 20px;
-    background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
-    border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 500;
+/* Approve Button Styling */
+.btn_approve {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
-}
-
-.doc-group > .value > a:hover {
-    background: linear-gradient(135deg, #4338ca 0%, #2563eb 100%);
-    box-shadow: 0 6px 15px rgba(79, 70, 229, 0.3);
-    transform: translateY(-2px);
-}
-.doc-group{
-    width: 100%;
-
-}
-.doc-group>.label{
-    width: 60%;
-}
-
-/* ===== ADMIN ATTENDANCE SECTION ===== */
-
-/* Attendance page container */
-.main> h2{
-    margin-top: 20px;
-    text-align: center;
-}
-
-/* Attendance table override */
-.main table{
-    width: 90%;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-}
-
-/* Table header */
-.main table th{
-    background-color: #3f4d67;   /* sidebar color match */
+    background-color: #3b82f6;
     color: white;
-    text-align: center;
-    padding: 12px;
-}
-
-/* Table cells */
-.main table td{
-    text-align: center;
-    padding: 10px;
-}
-
-/* Hover */
-.main table tr:hover{
-    background: #f5f7ff;
-}
-
-/* Radio button */
-.main input[type="radio"]{
-    transform: scale(1.2);
-    cursor: pointer;
-}
-
-/* Save button */
-.main .btn{
-    display: block;
-    margin: 15px auto;
-    background: #04A9F5;
-    color: white;
-    padding: 10px 18px;
-    border: none;
+    padding: 8px 16px;
     border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn_approve:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+.btn_approve i {
+    font-size: 14px;
+}
+
+/* ============================================================
+   FEES TABLE PAGE STYLING (END)
+   ============================================================ */
+   /* ============================================================
+   LEAVE MANAGEMENT PAGE STYLING (START)
+   ============================================================ */
+
+/* Table Container Wrapper */
+.table_container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+}
+
+/* Table Design */
+.leave_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leave_table th {
+    background-color: #f8fafc;
+    padding: 15px;
+    text-align: left;
+    color: #4a5568;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid #edf2f7;
+}
+
+.leave_table td {
+    padding: 15px;
+    border-bottom: 1px solid #edf2f7;
+    color: #2d3748;
+    font-size: 14px;
+}
+
+/* Reason Column Styling */
+.td-reason {
+    max-width: 200px;
+    color: #718096;
+    font-style: italic;
+}
+
+/* Status Badges */
+.status_badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-pending { background-color: #fef3c7; color: #d97706; }
+.status-approved { background-color: #dcfce7; color: #16a34a; }
+.status-rejected { background-color: #fee2e2; color: #dc2626; }
+
+/* Action Buttons Design */
+.action_btns {
+    display: flex;
+    gap: 10px;
+}
+
+.btn_action {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.approve {
+    background-color: #10b981;
+    color: white;
+}
+
+.approve:hover {
+    background-color: #059669;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+.reject {
+    background-color: #ef4444;
+    color: white;
+}
+
+.reject:hover {
+    background-color: #dc2626;
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3);
+}
+
+/* ============================================================
+   LEAVE MANAGEMENT PAGE STYLING (END)
+   ============================================================ */
+
+   /* ============================================================
+   STUDENT LIST PAGE STYLING (START)
+   ============================================================ */
+
+/* Table Container with Card Look */
+.table_container {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.table_header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #edf2f7;
+    padding-bottom: 15px;
+}
+
+.table_header h2 {
+    font-size: 18px;
+    color: #4a5568;
+}
+
+/* Main Data Table */
+.data_table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.data_table th {
+    padding: 15px;
+    background-color: #f8fafc;
+    color: #718096;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #edf2f7;
+}
+
+.data_table td {
+    padding: 15px;
+    border-bottom: 1px solid #edf2f7;
+    vertical-align: middle;
+}
+
+/* User Info & Avatar */
+.user_info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user_avatar {
+    width: 35px;
+    height: 35px;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ID Badge Style */
+.id_badge {
+    background-color: #f1f5f9;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: monospace;
+    color: #475569;
+    font-weight: 600;
+}
+
+/* Room Info Style */
+.room_info {
+    color: #2d3748;
     font-weight: 500;
 }
 
-.main .btn:hover{
-    background: #038ed0;
+.room_info i {
+    color: #3b82f6;
+    margin-right: 5px;
 }
 
-/* Success message */
-.success{
-    text-align: center;
-    color: #0f9d58;
+/* View Button Styling */
+.btn_view {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f8fafc;
+    color: #3b82f6;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    text-decoration: none;
+    font-size: 13px;
     font-weight: 600;
-    margin: 10px;
+    transition: 0.3s ease;
 }
 
-/* Layout fix */
-.main{
-    width: 81%;
-    padding-top: 20px;
+.btn_view:hover {
+    background-color: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+}
+
+/* ============================================================
+   STUDENT LIST PAGE STYLING (END)
+   ============================================================ */
+   /* ============================================================
+   STUDENT PROFILE VIEW - EXTERNAL STYLES
+   ============================================================ */
+
+/* Top Header Actions */
+.profile_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.btn_back {
+    text-decoration: none;
+    background: #ffffff;
+    color: #4b5563;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #e5e7eb;
+    transition: 0.3s;
+}
+
+.btn_back:hover {
+    background: #f9fafb;
+    color: #111827;
+}
+
+/* Layout Wrapper */
+.profile_wrapper {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* Info Card Common Styles */
+.info_card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.card_title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card_title i {
+    color: #3b82f6;
+}
+
+/* Profile Left Side (Photo Section) */
+.photo_card {
+    text-align: center;
+}
+
+.doc_label_top {
+    font-size: 11px;
+    font-weight: 800;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.student_profile_img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f8fafc;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.student_name_title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 15px 0 5px;
+}
+
+.room_tag {
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Document Links & Errors */
+.doc_links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.doc_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    background: #f8fafc;
+    padding: 14px;
+    border-radius: 12px;
+    color: #475569;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.doc_item:hover {
+    background: #3b82f6;
+    color: #ffffff;
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+}
+
+.error_msg {
+    color: #b91c1c;
+    background: #fef2f2;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #fee2e2;
+}
+
+/* Right Side Detail Grid */
+.detail_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.detail_item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.detail_item label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail_item span {
+    font-size: 15px;
+    color: #334155;
+    font-weight: 500;
 }
 
 /* Responsive */
-@media(max-width:768px){
-
-  .main{
-     width:100%;
-  }
-
-  .main table{
-     width:98%;
-  }
-
+@media (max-width: 992px) {
+    .profile_wrapper {
+        grid-template-columns: 1fr;
+    }
 }
+
+/* ============================================================
+   1. GLOBAL RESET & CORE THEME (START)
+   ============================================================ */
+:root {
+    --primary: #4361ee;
+    --primary-hover: #3730a3;
+    --secondary: #1e293b;
+    --success: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --bg-light: #f8fafc;
+    --text-main: #334155;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --sidebar-width: 260px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+}
+
+/* ============================================================
+   2. MAIN LAYOUT STRUCTURE
+   ============================================================ */
+.main_container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ============================================================
+   3. SIDEBAR STYLING (START)
+   ============================================================ */
+.sidebar {
+    width: var(--sidebar-width);
+    background: var(--secondary);
+    color: var(--white);
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-logo {
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-logo img {
+    max-width: 160px;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
+
+.sidebar-nav {
+    flex-grow: 1;
+    padding: 20px 15px;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav ul li {
+    margin-bottom: 8px;
+}
+
+.sidebar-nav ul li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: #94a3b8;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.sidebar-nav ul li a i {
+    width: 24px;
+    margin-right: 12px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.sidebar-nav ul li a:hover, 
+.sidebar-nav ul li a.active {
+    background-color: var(--primary);
+    color: var(--white);
+    box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+}
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-footer a {
+    color: #f87171;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.sidebar-footer a:hover {
+    background: rgba(248, 113, 113, 0.1);
+}
+
+/* ============================================================
+   4. CONTENT BODY & TABLES (START)
+   ============================================================ */
+.content_body {
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+    padding: 40px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.top_header {
+    margin-bottom: 30px;
+}
+
+.top_header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Table Card Container */
+.table_container {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    border: 1px solid #edf2f7;
+}
+
+/* Admin Edit Menu Table Styling */
+.edit_menu_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.edit_menu_table th {
+    background-color: var(--bg-light);
+    color: var(--text-muted);
+    padding: 15px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.edit_menu_table td {
+    padding: 12px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.day_label {
+    background-color: var(--bg-light);
+    color: var(--secondary);
+    font-weight: 800;
+    text-align: center;
+    border-right: 1px solid #e2e8f0;
+}
+
+.edit_input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #f1f5f9;
+    border-radius: 10px;
+    font-size: 14px;
+    background: #f8fafc;
+    transition: all 0.3s;
+}
+
+.edit_input:focus {
+    border-color: var(--primary);
+    background: var(--white);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.1);
+}
+
+.btn_update {
+    background: var(--success);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.btn_update:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+}
+
+/* ============================================================
+   5. RESPONSIVE DESIGN
+   ============================================================ */
+@media (max-width: 1024px) {
+    .sidebar { width: 80px; }
+    .sidebar-logo img, .sidebar-nav span, .sidebar-footer span { display: none; }
+    .content_body { margin-left: 80px; width: calc(100% - 80px); }
+    .sidebar-nav ul li a i { margin: 0; }
+}
+
+/* ============================================================
+   ATTENDANCE PAGE STYLING (START)
+   ============================================================ */
+
+.date_display {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.alert_success {
+    background: #dcfce7;
+    color: #16a34a;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    border: 1px solid #bbf7d0;
+}
+
+/* Attendance Table Specifics */
+.attendance_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.attendance_table th {
+    padding: 15px;
+    background: var(--bg-light);
+    color: var(--text-muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.attendance_table td {
+    padding: 15px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.id_col { font-family: monospace; color: var(--text-muted); }
+.room_badge { background: #f1f5f9; padding: 4px 10px; border-radius: 6px; font-weight: 700; }
+
+.text-center { text-align: center; }
+
+/* Custom Radio Button Styling */
+.radio_container {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+}
+
+.radio_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.3s;
+    border: 2px solid #cbd5e1;
+}
+
+.radio_container:hover input ~ .checkmark { background-color: #ccc; }
+
+/* Present Color (Green) */
+.radio_container input:checked ~ .present_mark {
+    background-color: var(--success);
+    border-color: var(--success);
+}
+
+/* Absent Color (Red) */
+.radio_container input:checked ~ .absent_mark {
+    background-color: var(--danger);
+    border-color: var(--danger);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio_container input:checked ~ .checkmark:after { display: block; }
+
+.radio_container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* Save Button */
+.form_actions {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.btn_save {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+}
+
+.btn_save:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+/* --- ATTENDANCE PAGE STYLING (END) --- */

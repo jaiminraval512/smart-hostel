@@ -322,7 +322,7 @@ VALUES
 ?>
         <script>
             alert("student registration Successful !");
-            window.location.href = "http://localhost/php/php_/hostel-management-system/index.php";
+            window.location.href = "../index.php";
         </script>
     <?php
         exit();

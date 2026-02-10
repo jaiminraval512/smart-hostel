@@ -1,13 +1,17 @@
+<?php
+include "sql/db.php";
+$menu_res = mysqli_query($cnn, "SELECT * FROM mess_menu");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Weekly Mess Menu</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>weekly_menu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -28,51 +32,18 @@
                         </tr>
                     </thead>
                     <tbody class="t-body">
-                        <tr class="tr">
-                            <td class="day-column">Monday</td>
-                            <td>Methi Thepla & Chutney</td>
-                            <td class="lunch">Vadi Nu Shaak, Rotli, Dal-Bhaat</td>
-                            <td>Bataka Nu Shaak, Rotli & Chaas</td>
-                        </tr>
-                        <tr class="tr">
-                            <td class="day-column">Tuesday</td>
-                            <td>Masala Poha & Sev</td>
-                            <td class="lunch">Ringan Bataka, Rotli, Dal-Bhaat</td>
-                            <td>Sev Tameta Nu Shaak & Bhakhri</td>
-                        </tr>
-                        <tr class="tr">
-                            <td class="day-column">Wednesday</td>
-                            <td>Gathiya & Papdi</td>
-                            <td class="lunch">Chana Nu Shaak, Rotli, Dal-Bhaat</td>
-                            <td>Kadhi-Khichdi & Aloo Bhujia</td>
-                        </tr>
-                        <tr class="tr">
-                            <td class="day-column">Thursday</td>
-                            <td>Upma / Vaghareli Rotli</td>
-                            <td class="lunch">Dudhi Nu Shaak, Rotli, Dal-Bhaat</td>
-                            <td>Vaghareli Khichdi & Dahi</td>
-                        </tr>
-                        <tr class="tr">
-                            <td class="day-column">Friday</td>
-                            <td>Khaman Dhokla</td>
-                            <td class="lunch">Mix Kathol (Chana/Moong), Rotli, Dal-Bhaat</td>
-                            <td>Bhinda Nu Shaak, Rotli & Dal</td>
-                        </tr>
-                        <tr class="tr">
-                            <td class="day-column">Saturday</td>
-                            <td>Aloo Paratha</td>
-                            <td class="lunch">Guvar nu Shaak, Rotli, Dal-Bhaat</td>
-                            <td>dahi ni tikhari ya Vegetable Pulao</td>
-                        </tr>
-                        <tr class="sunday-row tr">
-                            <td class="day-column">Sunday</td>
-                            <td>Puri Bhaji & Tea</td>
-                            <td class="lunch">Gujarati Dal, Bhaat, Rotli & Bataka Nu Shaak</td>
-                            <td class="special-dinner">
-                                <strong>🌟Special:</strong> Pav Bhaji / Chole Bhature & Gulab Jamun <br>
-                                <small>(Alternating: Manchurian, Dosa or Samosa)</small>
-                            </td>
-                        </tr>
+                        <?php while ($data = mysqli_fetch_assoc($menu_res)) {
+                            $sunday_class = ($data['day_name'] == 'Sunday') ? 'sunday-row' : '';
+                        ?>
+                            <tr class="tr <?php echo $sunday_class; ?>">
+                                <td class="day-column"><?php echo $data['day_name']; ?></td>
+                                <td><?php echo $data['breakfast']; ?></td>
+                                <td class="lunch"><?php echo $data['lunch']; ?></td>
+                                <td class="<?php echo ($data['day_name'] == 'Sunday') ? 'special-dinner' : ''; ?>">
+                                    <?php echo $data['dinner']; ?>
+                                </td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
@@ -145,8 +116,8 @@
                         </div>
                     </div>
         </main>
-    </div>
 
+    </div>
     <?php include "includes/footer.php" ?>
 </body>
 

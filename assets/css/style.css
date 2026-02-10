@@ -1308,3 +1308,154 @@ cursor:not-allowed;
 
 }
 
+/* ============================================================
+   APPLY LEAVE PAGE STYLING
+   ============================================================ */
+
+.leave-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content-header {
+    margin-bottom: 30px;
+}
+
+.content-header h2 {
+    color: #1e293b;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.content-header p {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Form Card Style */
+.form-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+}
+
+.leave-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Date inputs in one row */
+.date-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #1e293b;
+    background: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* Button Styling */
+.btn-submit {
+    background: #3b82f6;
+    color: #ffffff;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+.btn-submit i {
+    font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .date-row {
+        grid-template-columns: 1fr;
+    }
+}
+/* Status Section Styling */
+.status_badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Status Colors */
+.status-pending { background-color: #fef3c7; color: #d97706; }   /* Yellow */
+.status-approved { background-color: #dcfce7; color: #16a34a; }  /* Green */
+.status-rejected { background-color: #fee2e2; color: #dc2626; }  /* Red */
+
+/* Table Styling Consistency */
+.leave_table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.leave_table th, .leave_table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.td-reason {
+    max-width: 250px;
+    color: #64748b;
+    font-size: 13px;
+}

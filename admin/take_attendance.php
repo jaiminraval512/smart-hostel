@@ -8,7 +8,7 @@ $cnn = mysqli_connect("localhost", "root", "", "smart-hostel") or die("not conne
 //     header("Location: ../auth/login.php");
 //     exit();
 // }
-
+date_default_timezone_set('Asia/Kolkata');
 $today = date('Y-m-d');
 
 /* ---------- STUDENT LIST ---------- */
@@ -53,66 +53,75 @@ if (isset($_POST['save'])) {
 }
 ?>
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Take Attendance</title>
-  <link rel="stylesheet" href="style.css">
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Attendance | Smart Hostel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
- <div class="main">
-  <?php include 'admin_sidebar.php'; ?>
-  <div class="content">
- 
+    <div class="main_container">
+        <?php include 'admin_sidebar.php'; ?>
 
-    <h2>Take Attendance : <?php echo $today; ?></h2>
+        <div class="content_body">
+            <header class="top_header">
+                <h1><i class="fas fa-calendar-check"></i> Daily Attendance</h1>
+                <p class="date_display">Date: <strong><?php echo date('d M, Y', strtotime($today)); ?></strong></p>
+            </header>
 
-    <?php if (isset($msg)) echo "<p class='success'>$msg</p>"; ?>
+            <?php if (isset($msg)): ?>
+                <div class="alert_success">
+                    <i class="fas fa-check-circle"></i> <?php echo $msg; ?>
+                </div>
+            <?php endif; ?>
 
-    <form method="post">
+            <div class="table_container">
+                <form method="post">
+                    <table class="attendance_table">
+                        <thead>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Student Name</th>
+                                <th>Room</th>
+                                <th class="text-center">Present</th>
+                                <th class="text-center">Absent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php while ($s = mysqli_fetch_assoc($students)) { ?>
+                            <tr>
+                                <td class="id_col">#<?= $s['student_id'] ?></td>
+                                <td class="name_col"><strong><?= $s['full_name'] ?></strong></td>
+                                <td><span class="room_badge"><?= $s['room_number'] ?></span></td>
+                                
+                                <td class="text-center">
+                                    <label class="radio_container">
+                                        <input type="radio" name="status[<?= $s['student_id'] ?>]" value="Present" required>
+                                        <span class="checkmark present_mark"></span>
+                                    </label>
+                                </td>
 
-      <table>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Room</th>
-          <th>Present</th>
-          <th>Absent</th>
-        </tr>
+                                <td class="text-center">
+                                    <label class="radio_container">
+                                        <input type="radio" name="status[<?= $s['student_id'] ?>]" value="Absent">
+                                        <span class="checkmark absent_mark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
 
-        <?php while ($s = mysqli_fetch_assoc($students)) { ?>
-
-          <tr>
-            <td><?= $s['student_id'] ?></td>
-            <td><?= $s['full_name'] ?></td>
-            <td><?= $s['room_number'] ?></td>
-
-            <td>
-              <input type="radio"
-                name="status[<?= $s['student_id'] ?>]"
-                value="Present" required>
-            </td>
-
-            <td>
-              <input type="radio"
-                name="status[<?= $s['student_id'] ?>]"
-                value="Absent">
-            </td>
-
-          </tr>
-
-        <?php } ?>
-
-      </table>
-
-      <button name="save" class="btn">Save Attendance</button>
-
-    </form>
-  </div>
-  </div>
-
+                    <div class="form_actions">
+                        <button type="submit" name="save" class="btn_save">
+                            <i class="fas fa-save"></i> Save Attendance
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>
