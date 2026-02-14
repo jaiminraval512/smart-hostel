@@ -1,8 +1,7 @@
 <?php
 include "../includes/header.php";
 
-$cnn = mysqli_connect("localhost", "root", "", "smart-hostel")
-   or die("Database Not Connect");
+include "../sql/db.php"; 
 
 if (!isset($_SESSION['student_id'])) {
    header("Location: ../auth/login.php");

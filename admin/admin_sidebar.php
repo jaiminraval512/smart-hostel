@@ -21,7 +21,7 @@
             <li><a href="#"><i class="fas fa-door-open"></i> Rooms</a></li>
             <li><a href="fees_table.php"><i class="fas fa-money-check-alt"></i> Fees</a></li>
             <li><a href="take_attendance.php"><i class="fas fa-calendar-check"></i> Attendance</a></li>
-            <li><a href="#"><i class="fas fa-exclamation-circle"></i> Complaints</a></li>
+            <li><a href="manage_complaints.php"><i class="fas fa-exclamation-circle"></i> Complaints</a></li>
             <li><a href="edit_menu.php"><i class="fas fa-utensils"></i> Mess Menu</a></li>
             <li><a href="leave_manage.php"><i class="fas fa-file-signature"></i> Leave Reports</a></li>
         </ul>

@@ -1,4 +1,3 @@
-
 <?php
 include "../includes/header.php";
 
@@ -8,7 +7,7 @@ if (!isset($_SESSION['student_id'])) {
 }
 ?>
 <?php
-$cnn = mysqli_connect("localhost", "root", "", "smart-hostel") or die("not connect");
+include "../sql/db.php";
 ?>
 
 <!DOCTYPE html>
@@ -93,9 +92,37 @@ $cnn = mysqli_connect("localhost", "root", "", "smart-hostel") or die("not conne
 
                     <h3>Hostel Details</h3>
                     <div class="part-box">
-                        <div class="one-line"><label>Room Number</label>
-                            <input type="text" name="room_number" placeholder="Enter room number">
+                        <div class="one-line">
+                            <div class="one-line">
+                                <label>Select Room</label>
+                                <select name="room_number" required>
+                                    <option value="">-- Select Room --</option>
+
+                                    <?php
+                                    $roomQuery = "
+        SELECT r.room_number
+        FROM rooms r
+        WHERE (
+            SELECT COUNT(*) 
+            FROM room_allocation ra
+            WHERE ra.room_number = r.room_number
+            AND ra.status = 'Active'
+        ) < r.capacity
+        ";
+
+                                    $roomRes = mysqli_query($cnn, $roomQuery);
+
+                                    while ($room = mysqli_fetch_assoc($roomRes)) {
+                                        echo "<option value='{$room['room_number']}'>
+                    Room {$room['room_number']}
+                  </option>";
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+
                         </div>
+
                         <div class="one-line"><label>Admission Date</label>
                             <input type="date" name="admission_date">
                         </div>
@@ -175,25 +202,25 @@ $cnn = mysqli_connect("localhost", "root", "", "smart-hostel") or die("not conne
                             </label><br>
                             <label id="rull">
                                 <input type="checkbox" id="paid_rule" class="check">
-                               <strong>Note:</strong> The hostel fee must be paid within 15 days of admission; otherwise, the admission will be automatically cancelled. The student will be held fully responsible for this.
+                                <strong>Note:</strong> The hostel fee must be paid within 15 days of admission; otherwise, the admission will be automatically cancelled. The student will be held fully responsible for this.
                             </label><br>
 
                             <label id="rull">
                                 <input type="checkbox" id="agree_refund" class="check">
                                 Hostel fees are non-refundable as per hostel policy.
                             </label>
-   
-</div>
+
                         </div>
                     </div>
-
-                    <div class="sbm">
-                        <input type="submit" name="submit" value="Submit Admission" id="submitBtn" disabled>
-                        <input type="reset" value="↻ reset-form" id="reset">
-                    </div>
-                </form>
             </div>
-        </main>
+
+            <div class="sbm">
+                <input type="submit" name="submit" value="Submit Admission" id="submitBtn" disabled>
+                <input type="reset" value="↻ reset-form" id="reset">
+            </div>
+            </form>
+    </div>
+    </main>
     </div>
 
     <?php include "../includes/footer.php"; ?>
@@ -280,7 +307,9 @@ if (isset($_POST['submit'])) {
     $year_sem = $_POST['year_sem'];
     $enrollment_no = $_POST['enrollment_no'];
     $course_name = $_POST['course_name'];
-    $room_number = $_POST['room_number'];
+    $room_number = mysqli_real_escape_string($cnn, $_POST['room_number']);
+
+
     $admission_date = $_POST['admission_date'];
     $duration = $_POST['duration'];
     $guardian_name = $_POST['guardian_name'];
@@ -312,22 +341,58 @@ if (isset($_POST['submit'])) {
     $due_date = date('Y-m-d', strtotime('+15 days'));
     $fixed_fee = 30000;
 
-    
+
     mysqli_query($cnn, "INSERT INTO student_fees 
 (student_id, admission_date, due_date, fixed_fee, status) 
 VALUES 
 ('$student_id','$admission_date_fees','$due_date','$fixed_fee','unpaid')");
 
     if ($input) {
+
+        // 🔎 Room capacity check
+        $checkRoom = "
+    SELECT capacity,
+    (SELECT COUNT(*) FROM room_allocation 
+     WHERE room_number = '$room_number'
+     AND status = 'Active') AS occupied
+    FROM rooms
+    WHERE room_number = '$room_number'
+    ";
+
+        $roomResult = mysqli_query($cnn, $checkRoom);
+        $roomData = mysqli_fetch_assoc($roomResult);
+
+        if ($roomData && $roomData['occupied'] < $roomData['capacity']) {
+
+            mysqli_query(
+                $cnn,
+                "INSERT INTO room_allocation (student_id, room_number)
+             VALUES ('$student_id', '$room_number')"
+            );
 ?>
-        <script>
-            alert("student registration Successful !");
-            window.location.href = "../index.php";
-        </script>
-    <?php
-        exit();
+            <script>
+                alert("student registration Successful !");
+                window.location.href = "../index.php";
+            </script>
+        <?php
+            exit();
+        } else {
+
+            // ❌ Room Full → rollback admission
+            mysqli_query(
+                $cnn,
+                "DELETE FROM student_admission WHERE student_id = '$student_id'"
+            );
+        ?>
+            <script>
+                alert("Room Full! Please select another room.");
+                window.history.back();
+            </script>
+        <?php
+            exit();
+        }
     } else {
-    ?>
+        ?>
         <script>
             alert("registration failed ❌❌");
         </script>

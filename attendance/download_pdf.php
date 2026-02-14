@@ -1,6 +1,6 @@
 <?php
 session_start();
-$cnn=mysqli_connect("localhost","root","","smart-hostel");
+include "../sql/db.php"; 
 
 $sid=$_SESSION['student_id'];
 

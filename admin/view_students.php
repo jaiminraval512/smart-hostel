@@ -1,7 +1,7 @@
 <?php
 include "../sql/db.php";
 
-$sql = "SELECT full_name, student_id, room_number 
+$sql = "SELECT full_name, student_id, room_number
         FROM student_admission";
 
 $result = mysqli_query($cnn, $sql);

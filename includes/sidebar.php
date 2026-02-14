@@ -22,9 +22,12 @@
         </li>
 
         <li class="side-item">
-            <i class="fas fa-bed"></i>
-            <span>Rooms</span>
+            <a href="rooms/rooms.php">
+                <i class="fas fa-bed"></i>
+                <span>Rooms</span>
+            </a>
         </li>
+
 
         <li class="side-item">
             <a href="attendance/view_attendance.php">
@@ -52,7 +55,12 @@
                 <span>Leave Report</span>
             </a>
         </li>
-
+        <li class="side-item">
+            <a href="complaint.php">
+                <i class="fas fa-comment-dots"></i>
+                <span>Complaint</span>
+            </a>
+        </li>
 
         <li class="side-item logout">
             <a href="../smart-hostel/logout.php">
